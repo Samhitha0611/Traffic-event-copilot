@@ -3,9 +3,19 @@ import networkx as nx
 import osmnx as ox
 import pandas as pd
 
-GRAPH_PATH = "data/uppal_road_network.graphml"
-CSV_PATH = "outputs/location_mapping.csv"
-OUTPUT_PATH = "outputs/connectivity_results.csv"
+# Project paths
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+GRAPH_PATH = os.path.join(
+    BASE_DIR, "data", "uppal_road_network.graphml"
+)
+OUTPUT_DIR = os.path.join(BASE_DIR, "outputs")
+CSV_PATH = os.path.join(
+    OUTPUT_DIR, "location_mapping.csv"
+)
+OUTPUT_PATH = os.path.join(
+    OUTPUT_DIR, "connectivity_results.csv"
+)
 
 
 def check_connectivity():
@@ -112,7 +122,7 @@ def check_connectivity():
     # Save connectivity results
     if results:
 
-        os.makedirs("outputs", exist_ok=True)
+        os.makedirs(OUTPUT_DIR, exist_ok=True)
 
         result_df = pd.DataFrame(results)
 

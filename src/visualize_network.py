@@ -1,25 +1,33 @@
-import osmnx as ox
 import os
+import osmnx as ox
+
+# Project paths
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+GRAPH_PATH = os.path.join(
+    BASE_DIR, "data", "uppal_road_network.graphml"
+)
+OUTPUT_DIR = os.path.join(BASE_DIR, "outputs")
+OUTPUT_PATH = os.path.join(
+    OUTPUT_DIR, "uppal_road_network.png"
+)
+
 
 def visualize_network():
 
     print("\n========== ROAD NETWORK VISUALIZATION ==========")
 
     # Load downloaded graph
-    graph_path = "data/uppal_road_network.graphml"
-
-    G = ox.load_graphml(graph_path)
+    G = ox.load_graphml(GRAPH_PATH)
 
     print("Graph loaded successfully!")
     print("Total Nodes:", len(G.nodes))
     print("Total Edges:", len(G.edges))
 
     # Create output directory
-    os.makedirs("outputs", exist_ok=True)
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
 
     # Save road network visualization
-    output_path = "outputs/uppal_road_network.png"
-
     fig, ax = ox.plot_graph(
         G,
         node_size=0,
@@ -27,12 +35,12 @@ def visualize_network():
         show=False,
         close=True,
         save=True,
-        filepath=output_path,
+        filepath=OUTPUT_PATH,
         dpi=200
     )
 
     print("\nRoad network visualization saved!")
-    print("Location:", output_path)
+    print("Location:", OUTPUT_PATH)
 
     print("\nNETWORK VISUALIZATION COMPLETED!")
 

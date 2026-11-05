@@ -1,9 +1,6 @@
 import pandas as pd
 from load_data import load_data
 
-import pandas as pd
-from load_data import load_data
-
 
 def process_diversions():
 

@@ -4,8 +4,19 @@ import math
 import osmnx as ox
 import pandas as pd
 
-GRAPH_PATH = "data/uppal_road_network.graphml"
-OUTPUT_PATH = "outputs/location_mapping.csv"
+# Project paths
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+GRAPH_PATH = os.path.join(
+    BASE_DIR, "data", "uppal_road_network.graphml"
+)
+OUTPUT_DIR = os.path.join(BASE_DIR, "outputs")
+OUTPUT_PATH = os.path.join(
+    OUTPUT_DIR, "location_mapping.csv"
+)
+MANUAL_LOCATIONS_PATH = os.path.join(
+    BASE_DIR, "data", "manual_locations.csv"
+)
 
 SEARCH_RADIUS = 3000       # 3 km
 MAX_SNAP_DISTANCE = 250    # Maximum acceptable distance to a road
@@ -31,6 +42,25 @@ def calculate_distance(lat1, lon1, lat2, lon2):
 
     return 2 * R * math.asin(math.sqrt(a))
 
+
+def find_manual_location(place, manual_df):
+    """Check if place exists in manual locations."""
+    if manual_df is None or manual_df.empty:
+        return None
+    place_clean = place.strip().lower()
+    place_short = place_clean.split(",")[0].strip()
+    for _, row in manual_df.iterrows():
+        lat_val = row.get("Latitude")
+        lon_val = row.get("Longitude")
+        if pd.isna(lat_val) or pd.isna(lon_val) or str(lat_val).strip() == "" or str(lon_val).strip() == "":
+            continue
+        man_loc = str(row["Location"]).strip().lower()
+        man_short = man_loc.split(",")[0].strip()
+        if man_loc == place_clean or man_short == place_short or place_clean.startswith(man_short):
+            return row
+    return None
+
+
 def map_locations():
 
     print("\n========== HYDERABAD LOCATION MAPPING ==========")
@@ -45,6 +75,12 @@ def map_locations():
     print("Road network loaded successfully!")
     print("Total Nodes:", len(G.nodes))
     print("Total Edges:", len(G.edges))
+
+    # Load manual locations
+    manual_df = None
+    if os.path.exists(MANUAL_LOCATIONS_PATH):
+        manual_df = pd.read_csv(MANUAL_LOCATIONS_PATH)
+        print(f"Loaded {len(manual_df)} manual location(s) from {MANUAL_LOCATIONS_PATH}")
 
     # Reference location
     center_place = (
@@ -67,7 +103,9 @@ def map_locations():
         "Habsiguda, Hyderabad, India",
         "Boduppal, Hyderabad, India",
         "Tarnaka, Hyderabad, India",
-        "Ghatkesar, Telangana, India"
+        "Ghatkesar, Telangana, India",
+        "Stadium Metro Station",
+        "NGRI Metro Station"
     ]
 
     results = []
@@ -76,14 +114,48 @@ def map_locations():
 
         print("\nProcessing:", place)
 
-        try:
-            # Get geographical coordinates
-            lat, lon = ox.geocode(place)
+        manual_row = find_manual_location(place, manual_df)
+        if manual_row is not None:
+            lat = float(manual_row["Latitude"])
+            lon = float(manual_row["Longitude"])
+            source = str(manual_row.get("Source", "Manual"))
+            verified = manual_row.get("Verified", True)
+            print(f"Using manual location for '{place}' (Source: {source}, Verified: {verified})")
+        else:
+            lat, lon = None, None
+            geocode_error = None
+            for attempt in range(2):
+                try:
+                    lat, lon = ox.geocode(place)
+                    break
+                except Exception as e:
+                    geocode_error = e
+                    print(f"Geocoding attempt {attempt + 1} failed for '{place}': {type(e).__name__} - {e}")
+                    if attempt == 0:
+                        print(f"Retrying geocoding for '{place}'...")
+                        time.sleep(2.0)
 
+            if lat is None or lon is None:
+                print(f"FAILED to geocode '{place}'. Reason: {type(geocode_error).__name__} - {geocode_error}")
+                time.sleep(1.2)
+                continue
+
+            verified = "UNVERIFIED"
+
+        try:
             # Distance from Uppal Stadium
             center_distance = calculate_distance(
                 center_lat, center_lon, lat, lon
             )
+
+            # Check candidate metro stations distance to stadium centre
+            stadium_candidates = ["Stadium Metro Station", "NGRI Metro Station"]
+            if any(cand in place for cand in stadium_candidates):
+                if center_distance > 600:
+                    verified = "UNVERIFIED"
+                    print(f"WARNING: Geocoded location for '{place}' is {center_distance:.2f} m from stadium centre (> 600 m). Marked UNVERIFIED.")
+                else:
+                    verified = "VERIFIED"
 
             # Find nearest road network node
             nearest_node = ox.distance.nearest_nodes(
@@ -119,16 +191,18 @@ def map_locations():
                 "Distance_From_Stadium_m": round(center_distance, 2),
                 "Nearest_Node": nearest_node,
                 "Road_Distance_m": round(road_distance, 2),
-                "Status": status
+                "Status": status,
+                "Verified": verified
             })
 
             print("Distance from Stadium:", round(center_distance, 2), "m")
             print("Nearest Node:", nearest_node)
             print("Distance to Road:", round(road_distance, 2), "m")
             print("Status:", status)
+            print("Verified:", verified)
 
         except Exception as e:
-            print("Could not process location:", e)
+            print("Could not process location road mapping:", e)
 
         # Avoid sending geocoding requests too quickly
         time.sleep(1.2)
@@ -136,7 +210,7 @@ def map_locations():
     # Save results
     if results:
 
-        os.makedirs("outputs", exist_ok=True)
+        os.makedirs(OUTPUT_DIR, exist_ok=True)
 
         df = pd.DataFrame(results)
         df.to_csv(OUTPUT_PATH, index=False)
@@ -145,7 +219,7 @@ def map_locations():
 
         print(df[
             ["Location", "Distance_From_Stadium_m",
-             "Road_Distance_m", "Status"]
+             "Road_Distance_m", "Status", "Verified"]
         ].to_string(index=False))
 
         print("\nTotal Locations:", len(df))
