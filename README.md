@@ -45,3 +45,19 @@ Keep your existing `data/` (graphml + Excel pack) and `outputs/location_mapping.
 - Roads are loaded by repeated shortest-path re-routing, not a full dynamic traffic-assignment model.
 - Next step: replace assumptions with police ITMS counts (see data pack, sheet `Data_Sources` and `src/observed_counts.py`).
 
+
+
+## Data setup for all of Hyderabad (do this once)
+1. `py -m pip install -r requirements.txt`
+2. `py scripts/prepare_city_data.py --check`  tests which OpenStreetMap servers your network can reach (no API key needed).
+3. `py scripts/prepare_city_data.py --hospitals`  saves road maps and hospitals for every venue into `data/networks/` and `data/hyderabad_hospitals.csv`. Commit them.
+4. `py -m streamlit run app.py`
+
+If the app says "Road map ... is not available", your network blocks OpenStreetMap. Use a mobile hotspot or VPN, then click Retry.
+The app never shows a plan on another area's roads.
+
+### Traffic data honesty
+- `data/hyderabad_hourly_traffic_profiles.csv` is a SYNTHETIC, assumed typical-day shape. It is not measured data.
+- `data/real_count_anchors.csv` holds the few real published counts we found (older studies).
+- Real hourly speeds: set `TOMTOM_API_KEY` and run `py scripts/collect_tomtom_speeds.py --loop`. After 1-2 weeks `data/observed_speeds.csv` holds real speed by hour and day.
+- Real vehicle counts per road need the traffic police (ITMS/CCTV). Put them in the Traffic_Counts sheet.

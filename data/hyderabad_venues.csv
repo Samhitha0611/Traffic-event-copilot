@@ -1,0 +1,9 @@
+Venue_Key,Venue_Name,Commissionerate,Area,Latitude,Longitude,Capacity,Default_Hospital,Source
+uppal_stadium,Rajiv Gandhi International Cricket Stadium,Rachakonda Police,Uppal,17.406500,78.550500,39000,Gandhi Hospital,OpenStreetMap verified
+gachibowli_stadium,Gachibowli Stadium,Cyberabad Police,Gachibowli,17.449409,78.348468,30000,Continental Hospitals Gachibowli,OSM Nominatim
+lb_stadium,Lal Bahadur Shastri Stadium (LB Stadium),Hyderabad City Police,Basheerbagh,17.399565,78.472999,25000,Osmania General Hospital,OSM Nominatim
+hitex_centre,HITEX Exhibition Centre,Cyberabad Police,Madhapur/Kondapur,17.470811,78.374915,20000,Continental Hospitals Gachibowli,OSM Nominatim
+shilpakala_vedika,Shilpakala Vedika,Cyberabad Police,Madhapur,17.451408,78.379375,5000,Continental Hospitals Gachibowli,OSM Nominatim
+parade_ground,Parade Ground,Hyderabad City Police,Secunderabad,17.445061,78.493566,60000,Gandhi Hospital,OSM Nominatim
+tank_bund,NTR Marg / Tank Bund,Hyderabad City Police,Khairatabad/Tank Bund,17.415412,78.479628,50000,Osmania General Hospital,OSM Nominatim
+

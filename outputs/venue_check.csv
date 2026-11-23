@@ -1,0 +1,23 @@
+venue,status,notes,map,junctions,approaches,max_vc_naive,max_vc_copilot,roads_over_capacity,hotspots,hospital_km,seconds
+"Rajiv Gandhi International Cricket Stadium, Uppal",OK,,uppal_road_network.graphml,7276,5,1.9,1.77,64,21,0.8,1.9
+Gachibowli Stadium,OK,,gachibowli_stadium.graphml,2103,6,2.62,1.78,34,21,1.3,0.7
+"Lal Bahadur Shastri Stadium (LB Stadium), Basheerbagh",OK,,lb_stadium.graphml,6140,8,0.9,0.9,0,11,0.3,2.2
+"HITEX Exhibition Centre, Madhapur",OK,,hitex_centre.graphml,6298,8,1.02,1.01,1,8,0.9,1.8
+"Shilpakala Vedika, Madhapur",OK,,shilpakala_vedika.graphml,1168,7,0.46,0.46,0,0,0.4,0.4
+"Parade Ground, Secunderabad",OK,,parade_ground.graphml,6158,8,1.76,1.54,76,38,0.5,2.0
+NTR Marg / Tank Bund / People's Plaza,CHECK,venue is 302 m from the nearest road on the map,tank_bund.graphml,5221,8,2.2,1.66,30,41,0.6,2.2
+"Charminar, Old City",OK,,charminar.graphml,11782,8,0.76,0.76,0,0,0.1,2.8
+Cyber Towers / Hitec City,OK,,hitec_city.graphml,7097,8,0.95,0.95,0,3,0.2,1.8
+Banjara Hills (Road No 1 & 12),OK,,banjara_hills.graphml,6916,8,0.71,0.71,0,0,0.1,2.3
+Jubilee Hills Checkpost,OK,,jubilee_hills.graphml,7970,8,0.78,0.77,0,0,0.6,1.9
+Financial District / Nanakramguda,OK,,financial_district.graphml,2460,8,0.89,0.86,0,4,0.2,0.9
+Secunderabad Railway Station / Station Road,OK,,secunderabad_station.graphml,9530,8,1.18,1.12,10,2,0.2,2.3
+Mehdipatnam X Roads,OK,,mehdipatnam.graphml,9700,8,0.94,0.94,0,6,0.1,3.4
+Kukatpally / KPHB Colony,OK,,kukatpally.graphml,8783,8,1.5,1.45,2,6,0.1,2.7
+Dilsukhnagar Bus Depot / X Roads,OK,,dilsukhnagar.graphml,12108,8,1.25,1.25,10,7,0.2,3.4
+LB Nagar Ring Road / Junction,OK,,lb_nagar.graphml,11186,8,1.04,1.01,1,7,0.4,3.1
+Panjagutta X Roads,OK,,panjagutta.graphml,7263,8,0.8,0.79,0,0,0.2,2.4
+Ameerpet X Roads,OK,,ameerpet.graphml,6966,8,0.92,0.92,0,1,0.2,1.8
+Habsiguda X Roads,OK,,uppal_road_network.graphml,7276,6,1.41,1.15,7,8,0.2,2.2
+Tarnaka X Roads,OK,,tarnaka.graphml,8008,8,1.33,1.33,6,3,0.5,2.1
+Uppal X Roads,OK,,uppal_road_network.graphml,7276,5,1.58,1.5,45,13,0.3,2.1

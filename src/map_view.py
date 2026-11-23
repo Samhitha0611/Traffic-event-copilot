@@ -1,4 +1,4 @@
-"""Folium map for the demo: roads coloured by V/C, diversions, emergency corridor, zones."""
+"""Folium map for the demo: roads coloured by V/C, diversions, emergency corridor, zones with tactical tags."""
 import folium
 import pandas as pd
 
@@ -19,7 +19,8 @@ def _colour(vc):
 
 
 def make_map(D, res, use_naive=False, show_zones=True):
-    m = folium.Map(location=STADIUM, zoom_start=14, tiles="OpenStreetMap", control_scale=True)
+    venue_center = res.get("params", {}).get("venue_latlon") or STADIUM
+    m = folium.Map(location=venue_center, zoom_start=14, tiles="OpenStreetMap", control_scale=True)
     base = folium.FeatureGroup("Main roads (grey)")
     for u, v, d in D.edges(data=True):
         if d["road_type"] in ARTERIAL:
@@ -38,22 +39,50 @@ def make_map(D, res, use_naive=False, show_zones=True):
                         weight=3 + min(r.vc, 3) * 1.5, opacity=.9, tooltip=folium.Tooltip(tip)).add_to(roads)
     roads.add_to(m)
 
-    if res["corridor"]:
-        em = folium.FeatureGroup("Emergency corridor (protected)")
-        for u, v in res["corridor"]["edges"]:
+    # Tactical Hotspot Markers [H]
+    hotspot_group = folium.FeatureGroup("Hotspot checkpoints [H]")
+    tagged_hs = res.get("tagged_hotspots", [])
+    for h in tagged_hs[:6]:
+        u, v = int(h["u"]), int(h["v"])
+        mid_lat, mid_lon = node_xy(D, v)
+        h_tip = (
+            f"<b>[{h['tag']}] Hotspot: {h['street']}</b><br>"
+            f"V/C: <b>{h['vc']:.2f}</b> | Load: {h['load_pcu_hr']:,.0f} PCU/h<br>"
+            f"Capacity: {h['capacity_pcu_hr']:,.0f} PCU/h ({h['lanes']} lanes)<br>"
+            f"Traffic stream: {h['fed_by']}"
+        )
+        icon_color = "red" if h["vc"] > 1.0 else "orange"
+        folium.Marker(
+            (mid_lat, mid_lon),
+            tooltip=folium.Tooltip(h_tip),
+            icon=folium.Icon(color=icon_color, icon="exclamation-triangle", prefix="fa")
+        ).add_to(hotspot_group)
+    hotspot_group.add_to(m)
+
+    # Emergency Corridor [E-1]
+    if res.get("corridor"):
+        c = res["corridor"]
+        em = folium.FeatureGroup("Emergency corridor [E-1]")
+        for u, v in c["edges"]:
             folium.PolyLine(_coords(D, u, v), color="#6a0dad", weight=6, opacity=.9, dash_array="10 8",
-                            tooltip="Protected emergency corridor").add_to(em)
+                            tooltip="Protected emergency corridor [E-1]").add_to(em)
         em.add_to(m)
-        la, lo = node_xy(D, res["corridor"]["path"][0])
-        folium.Marker((la, lo), tooltip="Hospital (PLACEHOLDER location)",
+        la, lo = node_xy(D, c["path"][0])
+        hosp_tip = f"<b>[E-1] Hospital Gate</b><br>Protected ETA: {c.get('free_min', 0)} min (Congested ETA: {c.get('unprotected_min', 0)} min)"
+        folium.Marker((la, lo), tooltip=hosp_tip,
                       icon=folium.Icon(color="purple", icon="plus", prefix="fa")).add_to(m)
 
-    dv = folium.FeatureGroup("Recommended diversions")
-    for d in res["diversions"]:
-        if d["feasible"] and d.get("path"):
+    # Recommended Diversions [D]
+    dv = folium.FeatureGroup("Recommended diversions [D]")
+    for idx, d in enumerate(res.get("diversions", [])):
+        d_tag = d.get("tag", f"D-{idx+1}")
+        if d.get("feasible") and d.get("path"):
             pts = [node_xy(D, n) for n in d["path"]]
+            d_tip = f"<b>[{d_tag}] Diversion for {d['name']}</b><br>Detour penalty: +{d['extra_m']:,} m, +{d['extra_s']} s"
             folium.PolyLine(pts, color="#1f77b4", weight=5, dash_array="4 6",
-                            tooltip=f"Diversion for {d['name']}: +{d['extra_m']} m, +{d['extra_s']} s").add_to(dv)
+                            tooltip=d_tip).add_to(dv)
+            folium.Marker(pts[0], tooltip=f"[{d_tag}] Diversion Entry: {d['name']}",
+                          icon=folium.Icon(color="blue", icon="share", prefix="fa")).add_to(dv)
     dv.add_to(m)
 
     # Turn-back points from data/manual_locations.csv
@@ -98,30 +127,56 @@ def make_map(D, res, use_naive=False, show_zones=True):
                 ).add_to(tb_group)
             tb_group.add_to(m)
 
-    pts = folium.FeatureGroup("Approaches and zones")
-    for name, a in res["approaches"].items():
-        folium.CircleMarker(a["latlon"], radius=7, color="#1f4e9c", fill=True, fill_opacity=.9,
-                            tooltip=f"Approach: {name} ({a['share']*100:.0f}% of traffic)").add_to(pts)
+    # Approaches [J] and Parking [P]
+    pts = folium.FeatureGroup("Approaches [J] and zones [P]")
+    tagged_juncs = res.get("tagged_junctions", [])
+    if tagged_juncs:
+        for j in tagged_juncs:
+            folium.Marker(
+                j["latlon"],
+                tooltip=f"<b>[{j['tag']}] Checkpoint: {j['name']}</b><br>Approach share: {j['share']*100:.0f}%",
+                icon=folium.Icon(color="darkblue", icon="shield", prefix="fa")
+            ).add_to(pts)
+    else:
+        for name, a in res["approaches"].items():
+            folium.CircleMarker(a["latlon"], radius=7, color="#1f4e9c", fill=True, fill_opacity=.9,
+                                tooltip=f"Approach: {name} ({a['share']*100:.0f}% of traffic)").add_to(pts)
+
     if show_zones:
-        for p in res["parking"]:
-            folium.CircleMarker(node_xy(D, p), radius=3, color="#555", fill=True,
-                                tooltip="Assumed parking / drop-off zone").add_to(pts)
-    folium.Marker(UPPAL_METRO_VERIFIED, tooltip="Uppal metro station (verified coordinates)",
-                  icon=folium.Icon(color="green", icon="train", prefix="fa")).add_to(pts)
-    folium.Marker(STADIUM, tooltip="Rajiv Gandhi International Cricket Stadium",
+        tagged_p = res.get("tagged_parking", [])
+        if tagged_p:
+            for p in tagged_p:
+                folium.Marker(
+                    p["xy"],
+                    tooltip=f"<b>[{p['tag']}] Parking / Holding Zone</b>",
+                    icon=folium.Icon(color="cadetblue", icon="car", prefix="fa")
+                ).add_to(pts)
+        else:
+            for p in res["parking"]:
+                folium.CircleMarker(node_xy(D, p), radius=3, color="#555", fill=True,
+                                    tooltip="Assumed parking / drop-off zone").add_to(pts)
+
+    # Venue Marker
+    venue_name = res.get("params", {}).get("event_name", "Event Venue")
+    folium.Marker(venue_center, tooltip=f"<b>Venue: {venue_name}</b>",
                   icon=folium.Icon(color="darkblue", icon="star", prefix="fa")).add_to(pts)
+
+    if venue_center == STADIUM:
+        folium.Marker(UPPAL_METRO_VERIFIED, tooltip="Uppal metro station (verified coordinates)",
+                      icon=folium.Icon(color="green", icon="train", prefix="fa")).add_to(pts)
+
     pts.add_to(m)
     folium.LayerControl(collapsed=True).add_to(m)
 
     legend = """<div style="position:fixed;bottom:25px;left:25px;z-index:9999;background:white;padding:8px 12px;
     border:1px solid #888;border-radius:6px;font-size:12px;line-height:1.5">
-    <b>V/C (load / capacity)</b><br>
-    <span style="color:#2ca02c">&#9632;</span> under 0.8 OK<br>
-    <span style="color:#ffbf00">&#9632;</span> 0.8 to 1.0 near capacity<br>
-    <span style="color:#d62728">&#9632;</span> over 1.0 congested<br>
-    <span style="color:#6a0dad">&#9473;&#9473;</span> emergency corridor<br>
-    <span style="color:#1f77b4">&#9473;&#9473;</span> diversion<br>
-    <span style="color:red">&#9679;</span> turn-back point<br>
+    <b>Tactical Map Tags</b><br>
+    <span style="color:#003366">&#9632;</span> <b>[J]</b> Checkpoint Junctions<br>
+    <span style="color:#d62728">&#9632;</span> <b>[H]</b> Hotspots (V/C &gt; 1.0)<br>
+    <span style="color:#1f77b4">&#9632;</span> <b>[D]</b> Diversions &amp; Detours<br>
+    <span style="color:#6a0dad">&#9473;&#9473;</span> <b>[E]</b> Emergency Corridor<br>
+    <span style="color:#5f9ea0">&#9632;</span> <b>[P]</b> Parking Clusters<br>
+    <span style="color:red">&#9679;</span> Turn-back points<br>
     <i>Model estimate, not measured counts</i></div>"""
     m.get_root().html.add_child(folium.Element(legend))
     return m

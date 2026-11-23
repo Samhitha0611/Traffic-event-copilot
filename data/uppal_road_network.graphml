@@ -81116,7 +81116,7 @@
     </edge>
     <edge source="2236749138" target="2236749146" id="0">
       <data key="d9">[214050466, 1205716135]</data>
-      <data key="d10">['residential', 'unclassified']</data>
+      <data key="d10">['unclassified', 'residential']</data>
       <data key="d11">False</data>
       <data key="d12">True</data>
       <data key="d13">756.128848066693</data>
@@ -81155,7 +81155,7 @@
     </edge>
     <edge source="2236749146" target="2236749138" id="0">
       <data key="d9">[214050466, 1205716135]</data>
-      <data key="d10">['residential', 'unclassified']</data>
+      <data key="d10">['unclassified', 'residential']</data>
       <data key="d11">False</data>
       <data key="d12">False</data>
       <data key="d13">756.1288480666929</data>
@@ -109179,7 +109179,7 @@
     </edge>
     <edge source="2591588783" target="2591588787" id="0">
       <data key="d9">[253195454, 253195455]</data>
-      <data key="d10">['residential', 'unclassified']</data>
+      <data key="d10">['unclassified', 'residential']</data>
       <data key="d11">False</data>
       <data key="d12">[False, True]</data>
       <data key="d13">14.714802764701378</data>
@@ -109189,7 +109189,7 @@
     <edge source="2591588787" target="2591588783" id="0">
       <data key="d9">[253195454, 253195455]</data>
       <data key="d20">permissive</data>
-      <data key="d10">['residential', 'unclassified']</data>
+      <data key="d10">['unclassified', 'residential']</data>
       <data key="d11">False</data>
       <data key="d12">[False, True]</data>
       <data key="d13">14.714802764701378</data>
@@ -128782,7 +128782,7 @@
     </edge>
     <edge source="3598253416" target="10244261092" id="0">
       <data key="d9">[354040051, 1018188317, 354035838]</data>
-      <data key="d10">['residential', 'unclassified']</data>
+      <data key="d10">['unclassified', 'residential']</data>
       <data key="d11">False</data>
       <data key="d12">[False, True]</data>
       <data key="d13">443.91525650334347</data>
@@ -162405,7 +162405,7 @@
     <edge source="6635811370" target="6635824325" id="0">
       <data key="d9">[706224157, 706224158]</data>
       <data key="d10">residential</data>
-      <data key="d17">['Road No 7', 'Road No 1']</data>
+      <data key="d17">['Road No 1', 'Road No 7']</data>
       <data key="d11">False</data>
       <data key="d12">False</data>
       <data key="d13">199.2247919624778</data>
@@ -162664,7 +162664,7 @@
     <edge source="6635824325" target="6635811370" id="0">
       <data key="d9">[706224157, 706224158]</data>
       <data key="d10">residential</data>
-      <data key="d17">['Road No 7', 'Road No 1']</data>
+      <data key="d17">['Road No 1', 'Road No 7']</data>
       <data key="d11">False</data>
       <data key="d12">True</data>
       <data key="d13">199.2247919624778</data>
@@ -174121,7 +174121,7 @@
     </edge>
     <edge source="10244261092" target="3598253416" id="0">
       <data key="d9">[354040051, 1018188317, 354035838]</data>
-      <data key="d10">['residential', 'unclassified']</data>
+      <data key="d10">['unclassified', 'residential']</data>
       <data key="d11">False</data>
       <data key="d12">[False, True]</data>
       <data key="d13">443.9152565033434</data>
@@ -187483,7 +187483,7 @@
       <data key="d12">True</data>
       <data key="d13">38.21780868780367</data>
     </edge>
-    <data key="d0">2026-11-01 14:04:10</data>
+    <data key="d0">2026-11-05 17:58:19</data>
     <data key="d1">OSMnx 2.1.1</data>
     <data key="d2">epsg:4326</data>
     <data key="d3">True</data>

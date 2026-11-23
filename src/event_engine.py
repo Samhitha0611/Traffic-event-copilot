@@ -187,8 +187,52 @@ def entry_nodes(D, latlon, n=4, radius_m=700):
     return cand or [nearest_node(D, *latlon)]
 
 
-def load_approaches(D, shares=None, n_entry=4):
-    """Approach origins from the project's location_mapping.csv (fallback: built-in list)."""
+ARTERIAL_RANK = {"trunk": 4, "primary": 3, "secondary": 2, "tertiary": 1}
+COMPASS = ["North", "North-East", "East", "South-East", "South", "South-West", "West", "North-West"]
+
+
+def auto_approaches(D, venue_latlon, n_sectors=8, n_entry=3, min_frac=0.55):
+    """Approaches for ANY venue, taken from the real road map.
+    Entry points are junctions on main roads (tertiary or higher) in the outer part of the graph.
+    The share of traffic per direction is proportional to the capacity of the main roads there
+    (ASSUMED proxy: wider roads bring more vehicles). Police can override shares in the app."""
+    dist = {n: haversine(venue_latlon, node_xy(D, n)) for n in D.nodes}
+    R = max(dist.values()) if dist else 0
+    sectors = {}
+    for n, dn in dist.items():
+        if dn < min_frac * R:
+            continue
+        w, names = 0.0, []
+        for v in D.successors(n):
+            e = D[n][v]
+            if e["road_type"] in ARTERIAL_RANK:
+                w += e["cap"]
+                if e["name"]:
+                    names.append(e["name"])
+        if w <= 0:
+            continue
+        la, lo = node_xy(D, n)
+        brg = (math.degrees(math.atan2((lo - venue_latlon[1]) * math.cos(math.radians(venue_latlon[0])),
+                                       la - venue_latlon[0])) + 360) % 360
+        sec = int(((brg + 180 / n_sectors) % 360) // (360 / n_sectors))
+        sectors.setdefault(sec, []).append((w, n, names))
+    out, total = {}, sum(sum(x[0] for x in v) for v in sectors.values())
+    for sec, items in sorted(sectors.items()):
+        items.sort(key=lambda x: -x[0])
+        top = items[:n_entry]
+        weight = sum(x[0] for x in items)
+        roads = [nm for x in top for nm in x[2]]
+        via = max(set(roads), key=roads.count) if roads else None
+        label = f"{COMPASS[sec]} approach" + (f" via {via}" if via else "")
+        pts = [node_xy(D, x[1]) for x in top]
+        out[label] = {"nodes": [x[1] for x in top], "share": weight / total if total else 0,
+                      "latlon": (sum(p[0] for p in pts) / len(pts), sum(p[1] for p in pts) / len(pts)),
+                      "auto": True}
+    return out
+
+
+def load_approaches(D, shares=None, n_entry=4, center_latlon=None):
+    """Approach origins from the project's location_mapping.csv (fallback: built-in list or cardinal points)."""
     shares = dict(shares or DEFAULT_APPROACH_SHARE)
     coords = dict(FALLBACK_LOCATIONS)
     if LOCATION_CSV.exists():
@@ -197,6 +241,19 @@ def load_approaches(D, shares=None, n_entry=4):
             short = str(r["Location"]).split(",")[0].strip()
             if short in coords and short != "Uppal Metro Station":
                 coords[short] = (float(r["Latitude"]), float(r["Longitude"]))
+
+    # The named Uppal approaches only make sense for the Uppal stadium itself.
+    # Any other venue gets approaches detected from its own road map.
+    if center_latlon is not None and haversine(center_latlon, STADIUM) > 300:
+        auto = auto_approaches(D, center_latlon, n_entry=n_entry)
+        if auto:
+            return auto
+        clat, clon = center_latlon
+        cardinal = {"North Corridor": (clat + 0.022, clon), "South Corridor": (clat - 0.022, clon),
+                    "East Corridor": (clat, clon + 0.023), "West Corridor": (clat, clon - 0.023)}
+        return {name: {"nodes": entry_nodes(D, pt, n_entry), "share": 1.0 / len(cardinal), "latlon": pt}
+                for name, pt in cardinal.items()}
+
     tot = sum(shares.values()) or 1.0
     out = {}
     for name, sh in shares.items():
@@ -490,7 +547,7 @@ def load_manual_locations(path=None) -> pd.DataFrame:
     return pd.DataFrame()
 
 
-def get_manual_hospital_and_parking(manual_df: pd.DataFrame | None = None) -> tuple[tuple[float, float] | None, list[tuple[float, float]] | None]:
+def get_manual_hospital_and_parking(manual_df: pd.DataFrame | None = None, near_latlon=None, max_km: float = 5.0) -> tuple[tuple[float, float] | None, list[tuple[float, float]] | None]:
     """Extract first hospital coordinate and all parking coordinates from manual locations.
     Returns (hospital_latlon, parking_latlons). Either may be None if not found."""
     if manual_df is None:
@@ -509,12 +566,18 @@ def get_manual_hospital_and_parking(manual_df: pd.DataFrame | None = None) -> tu
     # Filter hospital rows (case-insensitive)
     h_mask = manual_df[type_col].astype(str).str.strip().str.lower() == "hospital"
     h_df = manual_df[h_mask]
+    def _near(la, lo):
+        return near_latlon is None or haversine(near_latlon, (la, lo)) <= max_km * 1000
+
     hospital_latlon = None
-    if not h_df.empty:
+    for _, hr in h_df.iterrows():
         try:
-            hospital_latlon = (float(h_df.iloc[0][lat_col]), float(h_df.iloc[0][lon_col]))
+            la, lo = float(hr[lat_col]), float(hr[lon_col])
         except (ValueError, TypeError):
-            hospital_latlon = None
+            continue
+        if _near(la, lo):
+            hospital_latlon = (la, lo)
+            break
 
     # Filter parking rows (case-insensitive)
     p_mask = manual_df[type_col].astype(str).str.strip().str.lower() == "parking"
@@ -522,24 +585,28 @@ def get_manual_hospital_and_parking(manual_df: pd.DataFrame | None = None) -> tu
     parking_latlons = []
     for _, r in p_df.iterrows():
         try:
-            parking_latlons.append((float(r[lat_col]), float(r[lon_col])))
+            la, lo = float(r[lat_col]), float(r[lon_col])
         except (ValueError, TypeError):
             continue
+        if _near(la, lo):
+            parking_latlons.append((la, lo))
 
     return hospital_latlon, (parking_latlons if parking_latlons else None)
 
 
 def run_scenario(D, params, pack=None):
     """params: attendance, start_time, phase, mode_share, approach_share, shift_pct, iterations,
-    hospital_latlon (optional), event_date (optional)."""
+    hospital_latlon (optional), event_date (optional), venue_latlon (optional), venue_name (optional)."""
     P = {"attendance": 39000, "start_time": "19:30", "phase": "ingress", "duration_h": 3.0,
          "mode_share": None, "approach_share": None, "shift_pct": 0.0, "iterations": 6,
-         "hospital_latlon": None, "event_date": None, "event_name": "Custom event"}
+         "hospital_latlon": None, "event_date": None, "event_name": "Custom event",
+         "venue_latlon": None}
     P.update(params)
-    stadium = nearest_node(D, *STADIUM)
+    venue_coords = P.get("venue_latlon") or STADIUM
+    stadium = nearest_node(D, *venue_coords)
 
     # Read data/manual_locations.csv for hospital and parking zones
-    manual_hosp, manual_parking = get_manual_hospital_and_parking()
+    manual_hosp, manual_parking = get_manual_hospital_and_parking(near_latlon=venue_coords)
 
     # Destination zones: rows with Type = parking, else generated zones
     if manual_parking:
@@ -557,17 +624,21 @@ def run_scenario(D, params, pack=None):
     elif manual_hosp is not None:
         hospital_latlon = manual_hosp
         hospital_is_placeholder = False
+    elif haversine(venue_coords, STADIUM) <= 300:
+        hospital_latlon = FALLBACK_LOCATIONS["Habsiguda"]  # ASSUMED placeholder, Uppal demo only
+        hospital_is_placeholder = True
     else:
-        hospital_latlon = FALLBACK_LOCATIONS["Habsiguda"]  # ASSUMED placeholder hospital
+        hospital_latlon = None   # no hospital known near this venue: say so, do not invent one
         hospital_is_placeholder = True
     P["hospital_latlon"] = hospital_latlon
 
-    approaches = load_approaches(D, P["approach_share"])
+    approaches = load_approaches(D, P["approach_share"], center_latlon=venue_coords)
     dem = compute_demand(P["attendance"], P["mode_share"], P["start_time"], P["phase"], P["duration_h"], P["shift_pct"])
 
-    corridor = emergency_corridor(D, nearest_node(D, *hospital_latlon), stadium)
+    corridor = emergency_corridor(D, nearest_node(D, *hospital_latlon), stadium) if hospital_latlon else None
     if corridor:
         corridor["is_placeholder"] = hospital_is_placeholder
+        corridor["tag"] = "E-1"
     protected = frozenset(corridor["edges"]) if corridor else frozenset()
 
     R = Router(D)
@@ -578,9 +649,10 @@ def run_scenario(D, params, pack=None):
 
     hot = group_hotspots(D, t_opt)
     divs = []
-    for _, r in hot.head(6).iterrows():
+    for idx, (_, r) in enumerate(hot.head(6).iterrows()):
         a = alternate_route(D, int(r.u), int(r.v), protected)
-        a.update({"edge": r.edge, "name": r["street"], "vc": r.vc}); divs.append(a)
+        a.update({"edge": r.edge, "name": r["street"], "vc": r.vc, "tag": f"D-{idx+1}"})
+        divs.append(a)
 
     if corridor:  # ETA with and without protection (event load from the naive run)
         unprot = sum(_bpr(D[a][b]["t0"], naive.get((a, b), 0) + D[a][b]["bg"] * D[a][b]["cap"], D[a][b]["cap"])
@@ -592,11 +664,47 @@ def run_scenario(D, params, pack=None):
         dv = pack["Diversions"].copy(); dv["Date"] = pd.to_datetime(dv["Date"]).dt.date
         advis = dv[dv["Date"] == P["event_date"]]
 
+    # Build operational tags dictionary
+    tagged_junctions = []
+    for idx, (app_name, a) in enumerate(approaches.items()):
+        tagged_junctions.append({
+            "tag": f"J-{idx+1}",
+            "name": app_name,
+            "share": a["share"],
+            "latlon": a["latlon"],
+            "nodes": a.get("nodes", [])
+        })
+
+    tagged_hotspots = []
+    for idx, (_, r) in enumerate(hot.head(10).iterrows()):
+        tagged_hotspots.append({
+            "tag": f"H-{idx+1}",
+            "street": r["street"],
+            "road_type": r["road_type"],
+            "lanes": r["lanes"],
+            "vc": r["vc"],
+            "load_pcu_hr": r["load_pcu_hr"],
+            "capacity_pcu_hr": r["capacity_pcu_hr"],
+            "fed_by": r["fed_by"],
+            "u": r["u"],
+            "v": r["v"]
+        })
+
+    tagged_parking = []
+    for idx, p_node in enumerate(parking):
+        tagged_parking.append({
+            "tag": f"P-{idx+1}",
+            "node": p_node,
+            "xy": node_xy(D, p_node)
+        })
+
     res = {"params": P, "demand": dem, "stadium": stadium, "parking": parking, "approaches": approaches,
            "naive": naive, "opt": opt, "table_naive": t_naive, "table_opt": t_opt,
            "sum_naive": s_naive, "sum_opt": s_opt, "history": hist, "times": times,
            "diversions": divs, "corridor": corridor, "advisory": advis, "hotspots": hot,
-           "hospital_is_placeholder": hospital_is_placeholder, "parking_is_generated": parking_is_generated}
+           "hospital_is_placeholder": hospital_is_placeholder, "parking_is_generated": parking_is_generated,
+           "tagged_junctions": tagged_junctions, "tagged_hotspots": tagged_hotspots,
+           "tagged_parking": tagged_parking}
     res["report"] = build_report(D, res)
     return res
 
@@ -604,42 +712,70 @@ def run_scenario(D, params, pack=None):
 def build_report(D, r):
     P, dem, so, sn = r["params"], r["demand"], r["sum_opt"], r["sum_naive"]
     L = []
-    L.append(f"# Traffic Plan: {P['event_name']}")
-    L.append(f"*{P['phase'].title()} phase, event start {P['start_time']}, attendance {P['attendance']:,} (ASSUMED if not stated).*\n")
+    L.append(f"# Traffic Operation Plan: {P['event_name']}")
+    L.append(f"*{P['phase'].title()} phase, event start {P['start_time']}, expected crowd {P['attendance']:,} (ASSUMED if not stated).*\n")
+    
     L.append("## 1. Impact summary")
-    L.append(f"- People by road vehicle: **{dem['total_vehicles']:,} vehicles = {dem['total_pcu']:,.0f} PCU** "
-             f"(buses: {dem['buses']}).")
-    L.append(f"- Busiest 15 minutes start at **{dem['peak_bucket']}**: {dem['peak_15min_pcu']:,.0f} PCU, "
-             f"equal to {dem['peak_hourly_pcu']:,.0f} PCU/hour.")
-    L.append(f"- Off the road: {dem['metro_riders']:,.0f} by metro and {dem['persons']['walk']:,.0f} on foot "
-             f"({dem['pedestrians']:,.0f} pedestrians at the venue).")
+    L.append(f"- Road vehicle demand: **{dem['total_vehicles']:,} vehicles = {dem['total_pcu']:,.0f} PCU** (buses: {dem['buses']}).")
+    L.append(f"- Peak 15-minute rush starts at **{dem['peak_bucket']}**: {dem['peak_15min_pcu']:,.0f} PCU, equal to **{dem['peak_hourly_pcu']:,.0f} PCU/hour**.")
+    L.append(f"- Transit off-road: **{dem['metro_riders']:,.0f}** by metro and **{dem['persons']['walk']:,.0f}** on foot ({dem['pedestrians']:,.0f} pedestrians total).")
+    
     L.append("\n## 2. Bottlenecks (model estimate)")
-    L.append(f"- Plain shortest-path routing (naive): max V/C **{sn['max_vc']:.2f}**, {sn['congested']} roads over capacity.")
-    L.append(f"- Co-Pilot spread-out routing: max V/C **{so['max_vc']:.2f}**, {so['congested']} roads over capacity, "
-             f"{so['near']} near capacity (0.8-1.0).")
-    for _, x in r["hotspots"].head(5).iterrows():
-        L.append(f"- {x.street} ({x.road_type}, {x.lanes} lane, {x.segments} segment(s)): peak load {x.load_pcu_hr:,.0f} vs "
-                 f"capacity {x.capacity_pcu_hr:,.0f} PCU/h, V/C {x.vc:.2f}; fed by {x.fed_by}.")
+    L.append(f"- Naive unmanaged routing: max V/C **{sn['max_vc']:.2f}**, {sn['congested']} road(s) over capacity.")
+    L.append(f"- Co-Pilot managed distribution: max V/C **{so['max_vc']:.2f}**, {so['congested']} road(s) over capacity, {so['near']} near capacity (0.8–1.0).")
+    L.append("\n**Tactical Hotspot Deployments (`[H]` tags):**")
+    for idx, x in enumerate(r["hotspots"].head(6).iterrows()):
+        _, row = x
+        tag = f"[H-{idx+1}]"
+        L.append(f"- **{tag} {row.street}** ({row.road_type}, {row.lanes} lane): peak load {row.load_pcu_hr:,.0f} vs capacity {row.capacity_pcu_hr:,.0f} PCU/h (V/C **{row.vc:.2f}**); incoming stream: *{row.fed_by}*.")
+    
     L.append("\n## 3. Diversion scheme")
-    for d in r["diversions"]:
+    L.append("**Tactical Diversion Directives (`[D]` tags):**")
+    for idx, d in enumerate(r["diversions"]):
+        tag = d.get("tag", f"[D-{idx+1}]")
         if d["feasible"]:
-            L.append(f"- {d['name']} (V/C {d['vc']:.2f}): alternate path adds {d['extra_m']} m and {d['extra_s']} s.")
+            L.append(f"- **{tag} {d['name']}** (relieving bottleneck V/C {d['vc']:.2f}): Alternate detour adds **+{d['extra_m']:,} m** and **+{d['extra_s']} s**. Divert non-pass private vehicles.")
         else:
-            L.append(f"- {d['name']} (V/C {d['vc']:.2f}): **no safe diversion** ({d['note']}). Use crowd/turn-back control.")
+            L.append(f"- **{tag} {d['name']}** (relieving bottleneck V/C {d['vc']:.2f}): **No safe detour route available** ({d['note']}). Enforce hard turn-back.")
+    
     if not r["advisory"].empty:
-        L.append("- Police advisory turn-backs for this date (from data pack):")
+        L.append("\n- **Official Police Advisory Diversions for this Date:**")
         for _, a in r["advisory"].drop_duplicates(["Movement", "Diversion_Point"]).iterrows():
-            L.append(f"  - {a['Movement']}: divert at {a['Diversion_Point']} -> {a['Diverted_Route']}")
+            L.append(f"  - *{a['Movement']}*: Divert at **{a['Diversion_Point']}** -> {a['Diverted_Route']}")
+    
     L.append("\n## 4. Emergency protection")
     c = r["corridor"]
     if c:
-        hosp_note = "hospital location is a placeholder" if r.get("hospital_is_placeholder", True) else "hospital location verified from manual_locations.csv"
-        L.append(f"- Protected ambulance corridor: {c['length_m']:,} m. ETA {c['free_min']} min with the corridor kept clear, "
-                 f"about {c['unprotected_min']} min if it is left open to event traffic ({hosp_note}).")
-    L.append("\n## 5. Approach travel times to destination zones near the stadium (empty vs event peak)")
-    for n, t in r["times"].items():
-        L.append(f"- {n}: {t['free_min']} min -> {t['peak_min']} min")
-    L.append("\n## 6. Data status")
-    L.append("- Road network: OpenStreetMap (real). Event dates, advisories, diversions: public police advisories via media (real).")
+        hosp_note = "hospital location is a placeholder (ASSUMED)" if r.get("hospital_is_placeholder", True) else "hospital location verified from records"
+        L.append(f"- Protected Emergency Green Corridor **`[E-1]`**: **{c['length_m']:,} metres**.")
+        L.append(f"  - Protected Free-Flow ETA: **{c['free_min']} minutes** (if corridor lane is kept clear).")
+        L.append(f"  - Unprotected ETA: **{c['unprotected_min']} minutes** under event gridlock ({hosp_note}).")
+        L.append(f"  - Time saved for trauma transport: **{max(0, c['unprotected_min'] - c['free_min']):.1f} minutes**.")
+
+    L.append("\n## 5. Sectorization & Approach Checkpoints (`[J]` and `[P]` tags)")
+    L.append("**Entry Checkpoint Junctions (`[J]` tags):**")
+    for j in r.get("tagged_junctions", []):
+        L.append(f"- **{j['tag']} {j['name']}**: Entry checkpoint handling **{j['share']*100:.0f}%** of spectator traffic.")
+    L.append("\n**Spectator Parking Zones (`[P]` tags):**")
+    for p in r.get("tagged_parking", []):
+        L.append(f"- **{p['tag']}**: Designated spectator parking / holding zone (Coordinates: {p['xy'][0]:.4f}, {p['xy'][1]:.4f}).")
+
+    L.append("\n## 6. Police Deployment Guidance (ASSUMED Heuristics)")
+    tot_veh = dem.get("total_vehicles", 0)
+    hs_count = len(r["hotspots"])
+    traffic_si = max(2, round(hs_count * 0.8))
+    traffic_constables = max(10, round(tot_veh / 800) + hs_count * 4)
+    marshals = max(6, round(dem.get("pedestrians", 0) / 2500))
+    L.append(f"- **Sector Officers (Sub-Inspectors/Inspectors):** ~{traffic_si} officers assigned across sectors.")
+    L.append(f"- **Traffic Constables / Marshals:** ~{traffic_constables} personnel for checkpoints `[J-1]`–`[J-4]` and diversions `[D-1]`–`[D-3]`.")
+    L.append(f"- **Crowd Controllers:** ~{marshals} marshals at transit stations and entry turnstiles.")
+
+    L.append("\n## 7. Public Advisory Bulletin")
+    top_str = ", ".join(r["hotspots"].head(3)["street"].tolist()) if len(r["hotspots"]) else "the venue vicinity"
+    L.append(f"> Heavy congestion expected around the venue from {P['start_time']}. Avoid {top_str}. "
+             f"Commuters are urged to take Metro or TGSRTC special shuttle services.")
+
+    L.append("\n## 8. Data status")
+    L.append("- Road network: OpenStreetMap (real). Event dates, advisories, diversions: public police advisories (real).")
     L.append("- Vehicle counts, speeds, queues on event days: **not available**; all loads here are model estimates (ASSUMED parameters).")
     return "\n".join(L)

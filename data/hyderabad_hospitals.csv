@@ -1,0 +1,817 @@
+Hospital_Name,Zone,Latitude,Longitude,Source
+Gandhi Hospital,Secunderabad / Central,17.423123,78.503454,OSM Nominatim
+Osmania General Hospital,Old City / Afzal Gunj,17.372954,78.47427,OSM Nominatim
+Apollo Hospitals Jubilee Hills,Jubilee Hills / Central,17.414936,78.413178,OSM Nominatim
+Continental Hospitals Gachibowli,Cyberabad / Gachibowli,17.417665,78.339131,OSM Nominatim
+KIMS Hospitals Secunderabad,Secunderabad,17.437271,78.482682,OSM Nominatim
+Yashoda Hospitals Malakpet,East / Malakpet,17.374656,78.499872,OSM Nominatim
+Care Hospital Banjara Hills,Banjara Hills,17.420657,78.448162,OSM Nominatim
+Satya Hospital,OpenStreetMap,17.407574,78.512174,OpenStreetMap
+Innova Children's Heart Hospital,OpenStreetMap,17.429316,78.533452,OpenStreetMap
+Apollo Clinic,OpenStreetMap,17.429095,78.533336,OpenStreetMap
+Oxygen Hospital,OpenStreetMap,17.455698,78.498403,OpenStreetMap
+L.K. Diagnostic,OpenStreetMap,17.451288,78.535486,OpenStreetMap
+L.K. Hospitals,OpenStreetMap,17.451385,78.535252,OpenStreetMap
+Dental Hospital,OpenStreetMap,17.451435,78.531197,OpenStreetMap
+Lakshmi Childrens Hospital,OpenStreetMap,17.368831,78.530189,OpenStreetMap
+Omni Hospital,OpenStreetMap,17.368478,78.538748,OpenStreetMap
+OZONE HOSPITALS,OpenStreetMap,17.359429,78.545068,OpenStreetMap
+Yashoda Super Speciality Hospital,OpenStreetMap,17.374656,78.499872,OpenStreetMap
+Tarnaka Flyover;TGSRTC Hospital,OpenStreetMap,17.425537,78.530679,OpenStreetMap
+hospital,OpenStreetMap,17.352677,78.554258,OpenStreetMap
+,OpenStreetMap,17.394046,78.510425,OpenStreetMap
+Meena Hospital,OpenStreetMap,17.44165,78.521851,OpenStreetMap
+Life Spring Hospitals,OpenStreetMap,17.428995,78.51207,OpenStreetMap
+Pushpagiri Eye Institute,OpenStreetMap,17.443909,78.504343,OpenStreetMap
+Guru Nanak Care Hospital,OpenStreetMap,17.415398,78.497989,OpenStreetMap
+Spark Hospitals,OpenStreetMap,17.402749,78.582654,OpenStreetMap
+"Surya Hospital, Hyderabad",OpenStreetMap,17.405751,78.58717,OpenStreetMap
+APEX HOSPITAL,OpenStreetMap,17.408074,78.598812,OpenStreetMap
+Sri Devi Maternity & Nursing Home,OpenStreetMap,17.422786,78.516597,OpenStreetMap
+Anukrushna Hospitals,OpenStreetMap,17.446158,78.53835,OpenStreetMap
+RAJUS DENTAL,OpenStreetMap,17.457111,78.546573,OpenStreetMap
+sri sai womens hospital,OpenStreetMap,17.370979,78.542568,OpenStreetMap
+Siva Eye Hospital,OpenStreetMap,17.370314,78.52761,OpenStreetMap
+"Rainbow Hospital for Women and Children, Secunderabad",OpenStreetMap,17.455319,78.500828,OpenStreetMap
+ADR Hospital,OpenStreetMap,17.458369,78.537879,OpenStreetMap
+Bristlecone Hospital,OpenStreetMap,17.392017,78.49616,OpenStreetMap
+Sree Netralaya Eye Hospital and Laser Centre,OpenStreetMap,17.367636,78.540451,OpenStreetMap
+Geetha Multi Speciality Hospital,OpenStreetMap,17.447062,78.508245,OpenStreetMap
+Amar Maternity Nursing Home,OpenStreetMap,17.398745,78.506979,OpenStreetMap
+Geeta Clinic And Maternity Home,OpenStreetMap,17.391947,78.496958,OpenStreetMap
+Nest Children's Hospital,OpenStreetMap,17.459337,78.50042,OpenStreetMap
+Mamata Fertility Hospital,OpenStreetMap,17.439649,78.499169,OpenStreetMap
+Ratna Maternity and Nursing Home,OpenStreetMap,17.353494,78.506859,OpenStreetMap
+Kishan Rao Hospital,OpenStreetMap,17.394299,78.507937,OpenStreetMap
+Sudarshan Hospital,OpenStreetMap,17.4142,78.502108,OpenStreetMap
+Dangoria Maternity and Nursing Home,OpenStreetMap,17.407779,78.497509,OpenStreetMap
+C.C. Shroff Memorial Hospital,OpenStreetMap,17.390804,78.496534,OpenStreetMap
+Hyderabad Kidney And Laparoscopic Centre,OpenStreetMap,17.371746,78.500593,OpenStreetMap
+Tanvi Eye Center,OpenStreetMap,17.450056,78.511526,OpenStreetMap
+"Aditya Hospital, Uppal",OpenStreetMap,17.401722,78.575656,OpenStreetMap
+Shalini Hospitals,OpenStreetMap,17.392533,78.495764,OpenStreetMap
+Vivek Hospital,OpenStreetMap,17.359854,78.504485,OpenStreetMap
+Madhava Nursing Home,OpenStreetMap,17.440958,78.502094,OpenStreetMap
+Vasundhara Nursing Home,OpenStreetMap,17.422637,78.49513,OpenStreetMap
+Saluja Hospital,OpenStreetMap,17.435076,78.502882,OpenStreetMap
+Anand Vitreo Retina Institute Pvt Ltd,OpenStreetMap,17.425542,78.534093,OpenStreetMap
+"Ankura Hospital, Boduppal",OpenStreetMap,17.40289,78.5829,OpenStreetMap
+"SRI LAXMI MULTI SPECIALITY HOSPITAL, LAPROSCOPIC AND RESEARCH CENTRE",OpenStreetMap,17.376051,78.556909,OpenStreetMap
+Anantha Lakshmi Kidney and Multi Specialty Hospital,OpenStreetMap,17.397465,78.536646,OpenStreetMap
+NephroPlus Dialysis Centre,OpenStreetMap,17.450289,78.509942,OpenStreetMap
+Sri Tirumala Maternity and Nursing Home,OpenStreetMap,17.423239,78.516376,OpenStreetMap
+SRESHTA SRI KAMALA HOSPITALS,OpenStreetMap,17.368289,78.52203,OpenStreetMap
+Sree Maruthi Nursing Home,OpenStreetMap,17.454963,78.508773,OpenStreetMap
+Parvathi Multispeciality Hospital,OpenStreetMap,17.456549,78.501442,OpenStreetMap
+Shashi Hospital,OpenStreetMap,17.369542,78.52137,OpenStreetMap
+Bhavya Hospital,OpenStreetMap,17.377156,78.557005,OpenStreetMap
+Pulse Hospitals,OpenStreetMap,17.421726,78.504133,OpenStreetMap
+Krishna Multi Speciality Hospital,OpenStreetMap,17.397343,78.560343,OpenStreetMap
+Matrix Hospital,OpenStreetMap,17.400237,78.540506,OpenStreetMap
+M S Reddy Lions Eye Hospital,OpenStreetMap,17.45714,78.563108,OpenStreetMap
+Shree Jaya Krishna Hospital,OpenStreetMap,17.397102,78.531912,OpenStreetMap
+Sathya Hospital,OpenStreetMap,17.401288,78.564838,OpenStreetMap
+Susrutha Hospital,OpenStreetMap,17.373217,78.503286,OpenStreetMap
+Sai Krishna Neuro Hospital,OpenStreetMap,17.389948,78.495928,OpenStreetMap
+Sagar Lal Memorial Hospital and Matadin Goel Research Center,OpenStreetMap,17.415665,78.498847,OpenStreetMap
+Krishna Maternity And Nursing Home,OpenStreetMap,17.428101,78.517051,OpenStreetMap
+Sri Srinivasa Nursing Home,OpenStreetMap,17.364687,78.544163,OpenStreetMap
+Rajagiri Hospitals,OpenStreetMap,17.410791,78.54347,OpenStreetMap
+Aravind Nursing Home,OpenStreetMap,17.436447,78.496189,OpenStreetMap
+Ramana Maternity Nursing Home,OpenStreetMap,17.39372,78.509534,OpenStreetMap
+Habsiguda Poly Clinic and Nursing Home,OpenStreetMap,17.417307,78.541202,OpenStreetMap
+SECUNDERABAD NURSING HOME,OpenStreetMap,17.445811,78.504999,OpenStreetMap
+Ramantapur Hospital,OpenStreetMap,17.397492,78.533953,OpenStreetMap
+Sai Sanjeevini Hospital,OpenStreetMap,17.360893,78.543222,OpenStreetMap
+Sowmya Hospital,OpenStreetMap,17.409733,78.508434,OpenStreetMap
+"Vasan Healthcare Private Limited, Secunderabad",OpenStreetMap,17.440488,78.497866,OpenStreetMap
+Santoshi Maternity Hospital,OpenStreetMap,17.446617,78.536029,OpenStreetMap
+Sai Nursing Home,OpenStreetMap,17.360188,78.504726,OpenStreetMap
+Neo Vision Eye Care and Laser Center,OpenStreetMap,17.417111,78.544087,OpenStreetMap
+Life Spring Maternity Hospital,OpenStreetMap,17.459459,78.55767,OpenStreetMap
+Sri Rama Krishna Hospital,OpenStreetMap,17.386347,78.494229,OpenStreetMap
+Manjary Multispeciality Hospital,OpenStreetMap,17.434898,78.54299,OpenStreetMap
+Taraporewalla Nursing Home,OpenStreetMap,17.44655,78.513372,OpenStreetMap
+Shenoy Nursing Home,OpenStreetMap,17.447807,78.508915,OpenStreetMap
+Dr. Zaibunnisa's Imtiyaz Hospital,OpenStreetMap,17.373777,78.49589,OpenStreetMap
+Vasan Healthcare,OpenStreetMap,17.369224,78.518987,OpenStreetMap
+Siris Hospital,OpenStreetMap,17.409765,78.544106,OpenStreetMap
+Janani Hospital,OpenStreetMap,17.393794,78.5302,OpenStreetMap
+Oarchid Hospital,OpenStreetMap,17.368848,78.534374,OpenStreetMap
+Sri Santosh Hospital,OpenStreetMap,17.43595,78.542599,OpenStreetMap
+Nikhil Hospital,OpenStreetMap,17.36821,78.520396,OpenStreetMap
+Shubhodaya Nursing Home,OpenStreetMap,17.438114,78.504968,OpenStreetMap
+Rukkus Dental Hospital & Implant Center,OpenStreetMap,17.394801,78.499034,OpenStreetMap
+Hyderabad Eye Hospital,OpenStreetMap,17.394246,78.498974,OpenStreetMap
+Hedge Maternity and Nursing Home,OpenStreetMap,17.370974,78.514752,OpenStreetMap
+Induss Hospitals,OpenStreetMap,17.367485,78.535848,OpenStreetMap
+Ammaji Childrens Hospital,OpenStreetMap,17.400249,78.566541,OpenStreetMap
+Ashok Kumar Hospital,OpenStreetMap,17.392053,78.496156,OpenStreetMap
+Sri Krishna Swathi Children's Hospital,OpenStreetMap,17.394608,78.530491,OpenStreetMap
+Shantilal Navodaya Multi Speciality Hospital,OpenStreetMap,17.398678,78.513626,OpenStreetMap
+Tilaknagar ABHAYA-BBC HOSPITAL,OpenStreetMap,17.394133,78.509929,OpenStreetMap
+Shiva Sai Hospital,OpenStreetMap,17.400472,78.566655,OpenStreetMap
+KIMS BIBI Hospital,OpenStreetMap,17.370256,78.500544,OpenStreetMap
+K.G.H The Family Hospital,OpenStreetMap,17.372733,78.509658,OpenStreetMap
+Pushpa Maternity and Nursing Home,OpenStreetMap,17.37104,78.500815,OpenStreetMap
+Spark Eye Care Hospital,OpenStreetMap,17.372432,78.507729,OpenStreetMap
+Ganga Orthopaedic and Maternity Hospital,OpenStreetMap,17.371949,78.535881,OpenStreetMap
+Midas ENT Head and Neck Super Speciality Hospital,OpenStreetMap,17.368902,78.516868,OpenStreetMap
+Lions Patny Hospital,OpenStreetMap,17.45035,78.503478,OpenStreetMap
+NEO BBC Childrens Hospital,OpenStreetMap,17.403052,78.510062,OpenStreetMap
+Soumya Multispeciality Hospital,OpenStreetMap,17.459133,78.500777,OpenStreetMap
+Sri Gayatri Hospital,OpenStreetMap,17.39009,78.5314,OpenStreetMap
+Suraksha Childrens Hospital,OpenStreetMap,17.426132,78.532429,OpenStreetMap
+The Dental Venue Multi Speciality Hospital (unit of Dr.Gowd’s),OpenStreetMap,17.44228,78.50432,OpenStreetMap
+Moosi Maternity and Genernal Hospital,OpenStreetMap,17.375891,78.497161,OpenStreetMap
+Hyma Children's Hospital,OpenStreetMap,17.367627,78.550873,OpenStreetMap
+Sai Jyothi Eye Institute,OpenStreetMap,17.446687,78.502716,OpenStreetMap
+Basant Sahney Hospitals,OpenStreetMap,17.450545,78.503242,OpenStreetMap
+Lions Dundoo Eye Institute,OpenStreetMap,17.450478,78.50622,OpenStreetMap
+RBM Multi-Speciality Hospital,OpenStreetMap,17.418378,78.583535,OpenStreetMap
+AVI Clinic,OpenStreetMap,17.409014,78.586413,OpenStreetMap
+Akshaya Care Multi Speciality Hospital,OpenStreetMap,17.417436,78.511832,OpenStreetMap
+Dr.Padmaja Fertility Centre and Nursing Home,OpenStreetMap,17.415015,78.545245,OpenStreetMap
+Geeta Multispeciality Hospital,OpenStreetMap,17.370156,78.532029,OpenStreetMap
+Sri Sai Balaji Hospital,OpenStreetMap,17.361706,78.56206,OpenStreetMap
+Bapuji Maternity and Nursing Home,OpenStreetMap,17.422761,78.546977,OpenStreetMap
+Abinav Orthopedic Hospital,OpenStreetMap,17.37004,78.527857,OpenStreetMap
+Dhanunjaya Nursing Home,OpenStreetMap,17.452482,78.56857,OpenStreetMap
+Chandamama Hospital,OpenStreetMap,17.427371,78.551769,OpenStreetMap
+Lakshmi Children's Hospital,OpenStreetMap,17.369612,78.530239,OpenStreetMap
+G.B.R. Hospital,OpenStreetMap,17.36927,78.534678,OpenStreetMap
+Manju Sudha Multispeciality Hospital,OpenStreetMap,17.369601,78.529242,OpenStreetMap
+TKR's IKON Hospital,OpenStreetMap,17.369375,78.520931,OpenStreetMap
+Sri JRD Hospital,OpenStreetMap,17.366553,78.535367,OpenStreetMap
+Raghava Hospital,OpenStreetMap,17.371643,78.534006,OpenStreetMap
+Harsha Neuro and General Hospital,OpenStreetMap,17.368167,78.526738,OpenStreetMap
+Anurag Orthopedic and Multispecial Hospital,OpenStreetMap,17.368923,78.529985,OpenStreetMap
+Sigma Hospitals,OpenStreetMap,17.36803,78.520622,OpenStreetMap
+Goodlife Hospitals,OpenStreetMap,17.369442,78.53142,OpenStreetMap
+Aashritha Hospital,OpenStreetMap,17.445501,78.567854,OpenStreetMap
+Swapna Hospital Private Limited,OpenStreetMap,17.369713,78.531977,OpenStreetMap
+Paramitha Children's Hospital,OpenStreetMap,17.359725,78.544877,OpenStreetMap
+Sai Nikith Speciality Hospital And Laproscopic Centre,OpenStreetMap,17.374065,78.54099,OpenStreetMap
+The Doctors Multi Speciality Hospital,OpenStreetMap,17.370774,78.5275,OpenStreetMap
+Medi Sight Eye Care centre,OpenStreetMap,17.358799,78.523738,OpenStreetMap
+KASTURI MULTISPECIALITY HOSPITAL,OpenStreetMap,17.438927,78.506087,OpenStreetMap
+AVANI LASER EYE HOSPITAL,OpenStreetMap,17.365866,78.552243,OpenStreetMap
+SANJEEVANI HOSPITAL,OpenStreetMap,17.373916,78.552123,OpenStreetMap
+Nakshatra Hospitals,OpenStreetMap,17.362388,78.557042,OpenStreetMap
+PADMVATI MEDICAL CENTRE,OpenStreetMap,17.426232,78.532203,OpenStreetMap
+B.V.K. REDDY HOSPITAL,OpenStreetMap,17.418579,78.517915,OpenStreetMap
+ANAND EYE INSITUTE,OpenStreetMap,17.418328,78.542785,OpenStreetMap
+NAVJEEVAN HOSPITAL,OpenStreetMap,17.45558,78.498173,OpenStreetMap
+Saptagiri Hospital,OpenStreetMap,17.369096,78.530161,OpenStreetMap
+DR RAJASHEKAR REDDY LAPAROSCOPY HOSPITAL,OpenStreetMap,17.354285,78.547043,OpenStreetMap
+ADRM HOSPITAL,OpenStreetMap,17.398498,78.536071,OpenStreetMap
+METRO CURE HOSPITAL,OpenStreetMap,17.372615,78.501002,OpenStreetMap
+SHREE POOJA HOSPITAL,OpenStreetMap,17.423032,78.547014,OpenStreetMap
+SBR Pulse Hospital,OpenStreetMap,17.367381,78.535807,OpenStreetMap
+Magnas ENT Hospital,OpenStreetMap,17.368126,78.530836,OpenStreetMap
+EYE CARE HYDERABAD,OpenStreetMap,17.373982,78.498583,OpenStreetMap
+SUMITHRA HOSPITALS,OpenStreetMap,17.396024,78.559704,OpenStreetMap
+Apollo Emergency Centre,OpenStreetMap,17.372248,78.500847,OpenStreetMap
+Susheela Hospital - R.K Puram,OpenStreetMap,17.367805,78.549603,OpenStreetMap
+Dr.Agarwal's Eye Hospital - Dilsukhnagar,OpenStreetMap,17.36909,78.522492,OpenStreetMap
+Whitus Hospital (A Unit Of Sri Shikhara Hospitals India Pvt Ltd),OpenStreetMap,17.41864,78.542091,OpenStreetMap
+SAFE CHLIDRENS HOSPITAL,OpenStreetMap,17.36967,78.514271,OpenStreetMap
+Satya Multi Speciality Hospital,OpenStreetMap,17.418915,78.565426,OpenStreetMap
+Dr.syed Ajaz hussain & Dr.syed mumtaz hussain,OpenStreetMap,17.377481,78.49964,OpenStreetMap
+Shalivahana Multi Speciality Hospitals,OpenStreetMap,17.372487,78.522991,OpenStreetMap
+Saroornagar Hospital,OpenStreetMap,17.354892,78.532407,OpenStreetMap
+Srihitha Hospital,OpenStreetMap,17.367644,78.529654,OpenStreetMap
+Lakshmi Priya Nursing,OpenStreetMap,17.40283,78.574145,OpenStreetMap
+SKIMS Hospital,OpenStreetMap,17.402344,78.567016,OpenStreetMap
+SAI RAM MULTI SPECIALITY HOSPITAL (ARK HEALTH CARE PVT LTD),OpenStreetMap,17.365936,78.525526,OpenStreetMap
+Durga prasad,OpenStreetMap,17.423463,78.547807,OpenStreetMap
+konark diagonistic center,OpenStreetMap,17.368592,78.518739,OpenStreetMap
+FAITH HOSIPTAL,OpenStreetMap,17.359137,78.494577,OpenStreetMap
+Osmania clinic,OpenStreetMap,17.371344,78.501893,OpenStreetMap
+yashoda,OpenStreetMap,17.391491,78.51139,OpenStreetMap
+Kamineni Hospital,OpenStreetMap,17.361432,78.553953,OpenStreetMap
+Tricolour Hospital,OpenStreetMap,17.393868,78.522643,OpenStreetMap
+Prathima Hospitals,OpenStreetMap,17.390262,78.495225,OpenStreetMap
+Tapadia Diagnostics Centre,OpenStreetMap,17.401247,78.563662,OpenStreetMap
+Basant Sahney Hospital,OpenStreetMap,17.444462,78.504859,OpenStreetMap
+Vasavi Hospital,OpenStreetMap,17.363229,78.544932,OpenStreetMap
+"Railway Health Unit, Kachiguda",OpenStreetMap,17.386706,78.495036,OpenStreetMap
+Rainbow Children's Medicare Pvt Ltd,OpenStreetMap,17.45572,78.49928,OpenStreetMap
+"Prasad Hospitals ,Nacharam",OpenStreetMap,17.438405,78.555126,OpenStreetMap
+Save Hospitals,OpenStreetMap,17.405837,78.587539,OpenStreetMap
+Centre for DNA Fingerprinting and Diagnostics,OpenStreetMap,17.3931,78.557539,OpenStreetMap
+Shree Healthcare Multi Specialty Hospital,OpenStreetMap,17.400987,78.579468,OpenStreetMap
+Shakti Ayurvedic Clinic,OpenStreetMap,17.447596,78.508942,OpenStreetMap
+Rahul Meidials,OpenStreetMap,17.452738,78.564877,OpenStreetMap
+Nandini,OpenStreetMap,17.452744,78.564725,OpenStreetMap
+kamineni,OpenStreetMap,17.35329,78.558974,OpenStreetMap
+Rikshith medical,OpenStreetMap,17.436611,78.603839,OpenStreetMap
+Vijaya Diagnostics Center,OpenStreetMap,17.411302,78.585993,OpenStreetMap
+Railway hospital,OpenStreetMap,17.44345,78.546132,OpenStreetMap
+آئی کیئر حیدرآباد (سپر اسپیشلٹی آئی ہسپتال),OpenStreetMap,17.375969,78.49736,OpenStreetMap
+hs,OpenStreetMap,17.435937,78.542695,OpenStreetMap
+Sri rama clinic,OpenStreetMap,17.441099,78.572079,OpenStreetMap
+"Community Health Centre, Lalapet",OpenStreetMap,17.43883,78.54187,OpenStreetMap
+"Community Health Centre, AMBERPET",OpenStreetMap,17.392195,78.517821,OpenStreetMap
+"Community Health Centre, Seethaphalmandi",OpenStreetMap,17.426535,78.519298,OpenStreetMap
+AREA HOSPITAL MALKAJGIRI,OpenStreetMap,17.450481,78.53212,OpenStreetMap
+"DK Govt Homoeopathic Hospital, Ramanthapur, Hyd",OpenStreetMap,17.397913,78.531018,OpenStreetMap
+Susheela Hospital,OpenStreetMap,17.393446,78.536596,OpenStreetMap
+Swasthya Dental Clinic,OpenStreetMap,17.366739,78.581129,OpenStreetMap
+Sai charan Children's hospital,OpenStreetMap,17.395982,78.529906,OpenStreetMap
+Janani infertility center,OpenStreetMap,17.394351,78.52991,OpenStreetMap
+CGHS Bandlaguda,OpenStreetMap,17.363751,78.585004,OpenStreetMap
+Dental clinic,OpenStreetMap,17.396815,78.501482,OpenStreetMap
+Durgabai Deshmukh Hospital and Research Centre,OpenStreetMap,17.402037,78.510283,OpenStreetMap
+Shreeda Children's Hospital,OpenStreetMap,17.401095,78.570838,OpenStreetMap
+Anitha Nursing Home,OpenStreetMap,17.405868,78.591445,OpenStreetMap
+pananeeya dental hospital,OpenStreetMap,17.364811,78.534055,OpenStreetMap
+مامدیپیڈی نگرجنہ ایریا اسپتال,OpenStreetMap,17.372558,78.498528,OpenStreetMap
+Sir Ronald Ross Institute of Tropical and Communicable Diseases (FEVER HOSPITAL),OpenStreetMap,17.396228,78.500967,OpenStreetMap
+Sai Datta Hospital,OpenStreetMap,17.396633,78.519153,OpenStreetMap
+Woodlands Hospital,OpenStreetMap,17.393067,78.497826,OpenStreetMap
+Govt hospital,OpenStreetMap,17.451017,78.533943,OpenStreetMap
+Ctomatodont Dental Care,OpenStreetMap,17.450263,78.534965,OpenStreetMap
+Pulse hospital,OpenStreetMap,17.421667,78.504281,OpenStreetMap
+Yashoda Super Speciality Hospital - secunderabad,OpenStreetMap,17.441798,78.497126,OpenStreetMap
+SRIKARA HOSPITALS,OpenStreetMap,17.435243,78.506568,OpenStreetMap
+apollo pharmacy,OpenStreetMap,17.355573,78.521561,OpenStreetMap
+Urban health centre,OpenStreetMap,17.355538,78.565896,OpenStreetMap
+حیدرآباد ملٹی اسپیشلیٹی ہسپتال,OpenStreetMap,17.371588,78.500565,OpenStreetMap
+انڈو یو ایس ہسپتال,OpenStreetMap,17.372617,78.500655,OpenStreetMap
+Pharmacy,OpenStreetMap,17.386972,78.52617,OpenStreetMap
+Vasudeva Rao Clinic,OpenStreetMap,17.387038,78.526201,OpenStreetMap
+Healing touch hospital,OpenStreetMap,17.44028,78.497587,OpenStreetMap
+Shenoy Hospital,OpenStreetMap,17.447816,78.508951,OpenStreetMap
+Vijaya Health Care,OpenStreetMap,17.438863,78.498661,OpenStreetMap
+Apollo Hospitals,OpenStreetMap,17.439565,78.504713,OpenStreetMap
+Care Hospitals - Secunderabad,OpenStreetMap,17.440056,78.497724,OpenStreetMap
+Medicover Hospitals Secunderabad,OpenStreetMap,17.440504,78.504594,OpenStreetMap
+Primary Healthcare Center,OpenStreetMap,17.412391,78.583853,OpenStreetMap
+Supraja Hospital,OpenStreetMap,17.376849,78.55833,OpenStreetMap
+فیتھ اسپتال,OpenStreetMap,17.359109,78.494534,OpenStreetMap
+ground,OpenStreetMap,17.400135,78.540756,OpenStreetMap
+ESI Hospital,OpenStreetMap,17.431949,78.552854,OpenStreetMap
+Pulse Clinics and Diagnostics,OpenStreetMap,17.450405,78.50309,OpenStreetMap
+Eye Hospital,OpenStreetMap,17.408728,78.502415,OpenStreetMap
+Vikram Hospitals,OpenStreetMap,17.440686,78.391665,OpenStreetMap
+Image Hospitals,OpenStreetMap,17.444434,78.386075,OpenStreetMap
+Arogyasree Health care trust,OpenStreetMap,17.430174,78.393732,OpenStreetMap
+LEAF HOSPITAL,OpenStreetMap,17.462961,78.367395,OpenStreetMap
+Ambicare Hospital,OpenStreetMap,17.453518,78.364084,OpenStreetMap
+haritha hospitals,OpenStreetMap,17.469602,78.366058,OpenStreetMap
+Anupama Hospital,OpenStreetMap,17.485604,78.390326,OpenStreetMap
+Matpathy Clinic,OpenStreetMap,17.406849,78.392201,OpenStreetMap
+Lucid Clinic,OpenStreetMap,17.497904,78.391161,OpenStreetMap
+Mamata Nursing Home,OpenStreetMap,17.488855,78.395995,OpenStreetMap
+Cygnus Institute of Gastroenterology Centre,OpenStreetMap,17.497663,78.390105,OpenStreetMap
+Saraswathi Nursing Home,OpenStreetMap,17.416022,78.391611,OpenStreetMap
+Apoolo Clinic,OpenStreetMap,17.459932,78.366084,OpenStreetMap
+Vasan Eye Care Hospital,OpenStreetMap,17.495526,78.332226,OpenStreetMap
+KIMS HOSPITAL,OpenStreetMap,17.466147,78.367744,OpenStreetMap
+Happy Children's Hospital,OpenStreetMap,17.492859,78.327984,OpenStreetMap
+Vanaja Hospital,OpenStreetMap,17.492186,78.327577,OpenStreetMap
+Archana Hospital,OpenStreetMap,17.495976,78.337417,OpenStreetMap
+Himagiri Hospital,OpenStreetMap,17.442233,78.358714,OpenStreetMap
+S.V. Pooja Hospital,OpenStreetMap,17.498762,78.384027,OpenStreetMap
+Raja Hospital,OpenStreetMap,17.494334,78.344827,OpenStreetMap
+"Apollo Dental Clinic, Hitech City",OpenStreetMap,17.450384,78.382561,OpenStreetMap
+Sriven Hospital,OpenStreetMap,17.485891,78.387531,OpenStreetMap
+Vijaya Diagnostic Centre,OpenStreetMap,17.494517,78.39876,OpenStreetMap
+Medical Store,OpenStreetMap,17.494924,78.396953,OpenStreetMap
+Ankura Hospital for Women & Children,OpenStreetMap,17.472998,78.387207,OpenStreetMap
+Ankura Multispeciality clinic,OpenStreetMap,17.473191,78.387263,OpenStreetMap
+Aurobindo Nethralaya,OpenStreetMap,17.491694,78.395825,OpenStreetMap
+Udbhava Children's Hospital,OpenStreetMap,17.491126,78.401082,OpenStreetMap
+Preeti Urology and Kidney Hospital,OpenStreetMap,17.491293,78.39691,OpenStreetMap
+Abhaya Multi Speciality Hospital,OpenStreetMap,17.500718,78.382584,OpenStreetMap
+Pranaam Hospitals,OpenStreetMap,17.496613,78.33988,OpenStreetMap
+Vignesh Nursing Home,OpenStreetMap,17.492527,78.39749,OpenStreetMap
+Prasad Hospital,OpenStreetMap,17.492061,78.401562,OpenStreetMap
+Praanadah Hospital,OpenStreetMap,17.437247,78.394275,OpenStreetMap
+Sankhya Hospital,OpenStreetMap,17.487645,78.400075,OpenStreetMap
+V.M.R Hospital,OpenStreetMap,17.491893,78.397227,OpenStreetMap
+Sushma Nursing Home,OpenStreetMap,17.494399,78.40204,OpenStreetMap
+Vijaya Nursing Home,OpenStreetMap,17.495673,78.325062,OpenStreetMap
+Sandhya Nursing Home,OpenStreetMap,17.493221,78.327158,OpenStreetMap
+L.V. Prasad Eye Institute,OpenStreetMap,17.439126,78.395838,OpenStreetMap
+Micro Care Ent Hospital and Research Institute,OpenStreetMap,17.494024,78.398545,OpenStreetMap
+Sai Siva Children’s Hospital,OpenStreetMap,17.494199,78.324019,OpenStreetMap
+Kadimi Nursing Home,OpenStreetMap,17.493931,78.326717,OpenStreetMap
+Ragi Hospital,OpenStreetMap,17.495754,78.341072,OpenStreetMap
+RR Orthopedic Hospital,OpenStreetMap,17.495421,78.322682,OpenStreetMap
+Global Eye Hospital,OpenStreetMap,17.491208,78.401169,OpenStreetMap
+Surakshaka Multi Speciality Hospital,OpenStreetMap,17.493284,78.401702,OpenStreetMap
+Ravi Hospital,OpenStreetMap,17.493629,78.400056,OpenStreetMap
+Merit Care Hospital,OpenStreetMap,17.493721,78.398375,OpenStreetMap
+Sarada Nursing Home,OpenStreetMap,17.494784,78.340439,OpenStreetMap
+Sandeep Nursing Home,OpenStreetMap,17.484821,78.388175,OpenStreetMap
+Vishnu Hospital,OpenStreetMap,17.495456,78.320896,OpenStreetMap
+Eswar Eye Hospital,OpenStreetMap,17.491726,78.397011,OpenStreetMap
+Kiran Swetha Children Clinic,OpenStreetMap,17.494738,78.322573,OpenStreetMap
+Mythri Multi Speciality Hospital,OpenStreetMap,17.498235,78.314448,OpenStreetMap
+Sai Anurag Hosptial,OpenStreetMap,17.49467,78.326822,OpenStreetMap
+Rainbow Childrens Hospital,OpenStreetMap,17.499785,78.384153,OpenStreetMap
+Icon Hospital,OpenStreetMap,17.485322,78.389928,OpenStreetMap
+Shilpa Nursing Home,OpenStreetMap,17.494765,78.36002,OpenStreetMap
+Varsha Hospital,OpenStreetMap,17.494822,78.401659,OpenStreetMap
+Sagar Hospital,OpenStreetMap,17.485883,78.389022,OpenStreetMap
+Padmaavathi Netralaya,OpenStreetMap,17.491511,78.401312,OpenStreetMap
+Sri Balaji Hospital,OpenStreetMap,17.401659,78.384866,OpenStreetMap
+Sujatha Nursing Home,OpenStreetMap,17.495134,78.402478,OpenStreetMap
+Live Life Hospital,OpenStreetMap,17.438303,78.399498,OpenStreetMap
+Sidhartha Nursing Home,OpenStreetMap,17.502201,78.312988,OpenStreetMap
+American Oncology Institute,OpenStreetMap,17.470701,78.310914,OpenStreetMap
+Citizens Specialty Hospital,OpenStreetMap,17.470774,78.311311,OpenStreetMap
+Rajitha Hospital,OpenStreetMap,17.450697,78.364031,OpenStreetMap
+Sri Aurobindo Nethralaya,OpenStreetMap,17.492618,78.396424,OpenStreetMap
+MAXCURE SUYOSHA WOMAN & CHILD HOSPITAL,OpenStreetMap,17.446436,78.378648,OpenStreetMap
+Kakatiya Hospital,OpenStreetMap,17.449727,78.367239,OpenStreetMap
+ENT CARE HOSPITAL,OpenStreetMap,17.49511,78.370612,OpenStreetMap
+NAIDU EYE HOSPITAL,OpenStreetMap,17.494432,78.341565,OpenStreetMap
+HEALIX HOSPITAL,OpenStreetMap,17.494321,78.34615,OpenStreetMap
+Oakridge Hospitals,OpenStreetMap,17.44484,78.385505,OpenStreetMap
+Amrita ENT Head & Neck Hospital,OpenStreetMap,17.488561,78.391521,OpenStreetMap
+REFRACTO EYE HOSPITAL (A GROUP OF CREDIBLE HEALTH CARE PVT LTD ),OpenStreetMap,17.462002,78.366907,OpenStreetMap
+VIJAYA SREE HOSPITAL,OpenStreetMap,17.495408,78.321311,OpenStreetMap
+Sri Sri Holistic Hospitals,OpenStreetMap,17.488743,78.400546,OpenStreetMap
+Smart Vision Eye Hospitals Pvt Ltd,OpenStreetMap,17.489379,78.400815,OpenStreetMap
+MCS NEURO HOSPITAL,OpenStreetMap,17.49256,78.397743,OpenStreetMap
+HAPPY HOSPITAL,OpenStreetMap,17.494757,78.343236,OpenStreetMap
+Landmark Hospital,OpenStreetMap,17.499227,78.388002,OpenStreetMap
+PACIFIC CLINICS (A Unit of Pacific Hospitals Pvt Ltd.),OpenStreetMap,17.419476,78.371508,OpenStreetMap
+Baabaji Nethralaya Eye Hospital,OpenStreetMap,17.49102,78.396708,OpenStreetMap
+MOTHERHOOD FERTILITY CENTRE,OpenStreetMap,17.496072,78.345239,OpenStreetMap
+MedWise Hospital (A unit of Chirayu Avigna Healthcare),OpenStreetMap,17.490815,78.396851,OpenStreetMap
+Vijaya Hospital,OpenStreetMap,17.495333,78.346118,OpenStreetMap
+Motherhood Clinic,OpenStreetMap,17.430028,78.374227,OpenStreetMap
+Srija Hospital,OpenStreetMap,17.427924,78.324081,OpenStreetMap
+Madhusudhan Hospital,OpenStreetMap,17.488394,78.39696,OpenStreetMap
+Prolife Hospital,OpenStreetMap,17.400366,78.389431,OpenStreetMap
+Trichos Skin Care,OpenStreetMap,17.488937,78.400667,OpenStreetMap
+JBI Hospital,OpenStreetMap,17.409239,78.400702,OpenStreetMap
+J.K. Hospital,OpenStreetMap,17.493399,78.397972,OpenStreetMap
+Shreya Hospitals,OpenStreetMap,17.479508,78.320245,OpenStreetMap
+Shobha Hospital,OpenStreetMap,17.400359,78.382573,OpenStreetMap
+Archana Multi Speciality Hospital,OpenStreetMap,17.493498,78.320921,OpenStreetMap
+SRU Facture & Plastic Surgery,OpenStreetMap,17.494238,78.399533,OpenStreetMap
+Gangaram Community Hall Health Sub Center,OpenStreetMap,17.494495,78.329685,OpenStreetMap
+KIMS Cruddle,OpenStreetMap,17.465967,78.367807,OpenStreetMap
+srisri holistic,OpenStreetMap,17.5029,78.388752,OpenStreetMap
+,OpenStreetMap,17.502983,78.38878,OpenStreetMap
+Apollo,OpenStreetMap,17.459455,78.36598,OpenStreetMap
+Titan eye plus,OpenStreetMap,17.494799,78.340253,OpenStreetMap
+Srinivasa Hospital,OpenStreetMap,17.440695,78.394359,OpenStreetMap
+lifespan hospitals,OpenStreetMap,17.44582,78.392417,OpenStreetMap
+Samanta Homeopathy,OpenStreetMap,17.441378,78.38809,OpenStreetMap
+Ankura Children hospital,OpenStreetMap,17.49473,78.341244,OpenStreetMap
+Dr.agarwals,OpenStreetMap,17.493937,78.351628,OpenStreetMap
+saidatha homeo stores and clinic,OpenStreetMap,17.486653,78.391272,OpenStreetMap
+Tirumala Nursing home,OpenStreetMap,17.499882,78.357473,OpenStreetMap
+"Medicover Hospital ,Chandanagar",OpenStreetMap,17.498279,78.314618,OpenStreetMap
+"Preeti Urology & Kidney Hospital ,BHEL, Lingampally",OpenStreetMap,17.494321,78.316862,OpenStreetMap
+AMVI Hospital,OpenStreetMap,17.398844,78.365294,OpenStreetMap
+Dr Shaivalini - Gynecologist,OpenStreetMap,17.398716,78.3653,OpenStreetMap
+Hegde Hospital,OpenStreetMap,17.444623,78.384659,OpenStreetMap
+Rainbow Children Hospital,OpenStreetMap,17.455462,78.37201,OpenStreetMap
+"Pace Hospitals ,Madinaguda",OpenStreetMap,17.494023,78.347075,OpenStreetMap
+Health Valley Hospital,OpenStreetMap,17.464418,78.368245,OpenStreetMap
+"Praba's VCare Health Clinic (P) Ltd, Gachibowli",OpenStreetMap,17.450711,78.36315,OpenStreetMap
+Remedy Hospitals,OpenStreetMap,17.485504,78.390805,OpenStreetMap
+Cosmo Derma,OpenStreetMap,17.490867,78.397017,OpenStreetMap
+Padmaja Hospital,OpenStreetMap,17.486946,78.399415,OpenStreetMap
+K K Reddy Hospital,OpenStreetMap,17.491999,78.397239,OpenStreetMap
+Goutam Neuro Care,OpenStreetMap,17.492813,78.397999,OpenStreetMap
+Dr. Rao's ENT Super Speciality International Hospital,OpenStreetMap,17.488124,78.394972,OpenStreetMap
+"Udbhava Hospital ,Miyapur",OpenStreetMap,17.495123,78.357408,OpenStreetMap
+Chenna reddy hospital,OpenStreetMap,17.494058,78.321224,OpenStreetMap
+Dr Agarwals Eye Hospital,OpenStreetMap,17.431017,78.371698,OpenStreetMap
+JNTU Hospital,OpenStreetMap,17.491548,78.391066,OpenStreetMap
+Omega Hospitals,OpenStreetMap,17.436425,78.367581,OpenStreetMap
+Yashoda Hospitals,OpenStreetMap,17.462269,78.384176,OpenStreetMap
+Reborn Skin and Hair Clinic,OpenStreetMap,17.473116,78.38724,OpenStreetMap
+Sai Ayush Ayurveda Hospital - wellness Hyderabad,OpenStreetMap,17.473193,78.3872,OpenStreetMap
+Pi Health Hospital,OpenStreetMap,17.448241,78.360576,OpenStreetMap
+Oneders Clinics,OpenStreetMap,17.409064,78.399991,OpenStreetMap
+Arete Hospitals,OpenStreetMap,17.427674,78.374907,OpenStreetMap
+Medicover,OpenStreetMap,17.455214,78.37756,OpenStreetMap
+Gokul Speciality Clinics,OpenStreetMap,17.494653,78.388164,OpenStreetMap
+Saritha Dental Clinic,OpenStreetMap,17.487738,78.399687,OpenStreetMap
+AIG HOSPITALS,OpenStreetMap,17.443278,78.36615,OpenStreetMap
+"Government Area Hospital, Kondapur",OpenStreetMap,17.463138,78.353011,OpenStreetMap
+"Lotus Hospitals, Kukatpally",OpenStreetMap,17.491028,78.393124,OpenStreetMap
+Continental Hospitals,OpenStreetMap,17.417665,78.339131,OpenStreetMap
+BHEL Hospital,OpenStreetMap,17.496811,78.305276,OpenStreetMap
+Apollo Hospital,OpenStreetMap,17.494151,78.40317,OpenStreetMap
+Remedy Hospital,OpenStreetMap,17.495446,78.39668,OpenStreetMap
+Remedy Hosptials,OpenStreetMap,17.494684,78.398536,OpenStreetMap
+lahari dental hospital,OpenStreetMap,17.503383,78.388436,OpenStreetMap
+Kiran Skin Care Hospital,OpenStreetMap,17.496664,78.397576,OpenStreetMap
+Pace Hospitals,OpenStreetMap,17.44676,78.384057,OpenStreetMap
+"VHeal ENT, ORTHO and Multispeciality Center",OpenStreetMap,17.495397,78.319749,OpenStreetMap
+Care Hospitals,OpenStreetMap,17.430535,78.372191,OpenStreetMap
+Mamtha Hospital,OpenStreetMap,17.496697,78.397824,OpenStreetMap
+Srikara  Robotics and Super Speciality Hospital,OpenStreetMap,17.495178,78.357441,OpenStreetMap
+Lakshmi hospital,OpenStreetMap,17.490585,78.337404,OpenStreetMap
+Sankaraya Eye Hospital,OpenStreetMap,17.401518,78.349984,OpenStreetMap
+siddarth hospital,OpenStreetMap,17.494201,78.346528,OpenStreetMap
+siddarth neuro hospital,OpenStreetMap,17.493938,78.346522,OpenStreetMap
+Ameerpet Government Hospital,OpenStreetMap,17.441714,78.447878,OpenStreetMap
+Sri Vijaya Hospitals,OpenStreetMap,17.44228,78.448034,OpenStreetMap
+Sree Priya Multi Speciality Hospital,OpenStreetMap,17.441541,78.446125,OpenStreetMap
+Rahmat Ali hospital,OpenStreetMap,17.367227,78.485988,OpenStreetMap
+Vasavi ENT Hospital,OpenStreetMap,17.40681,78.464502,OpenStreetMap
+Mahavir Hospital and Research Centre,OpenStreetMap,17.403664,78.457063,OpenStreetMap
+Old Apollo Hospital,OpenStreetMap,17.398559,78.481411,OpenStreetMap
+Krishna Children's Hospital,OpenStreetMap,17.402133,78.46253,OpenStreetMap
+Surojini Devi Eye Hospital,OpenStreetMap,17.399036,78.444797,OpenStreetMap
+Star Hospital,OpenStreetMap,17.415691,78.445461,OpenStreetMap
+Rainbow Hospitals,OpenStreetMap,17.414814,78.447569,OpenStreetMap
+Fernandez Hospital,OpenStreetMap,17.39215,78.479365,OpenStreetMap
+Apollo Emergency Hospital,OpenStreetMap,17.399396,78.479201,OpenStreetMap
+Care Clinic,OpenStreetMap,17.420657,78.448162,OpenStreetMap
+Anu Test Tube Centre,OpenStreetMap,17.421779,78.460206,OpenStreetMap
+Hope Children's Hospital,OpenStreetMap,17.406428,78.473881,OpenStreetMap
+Swapna Health Care,OpenStreetMap,17.429165,78.456738,OpenStreetMap
+Asian Institute of Gastroenterology,OpenStreetMap,17.421137,78.456656,OpenStreetMap
+Nova ENT Hospital,OpenStreetMap,17.418436,78.457264,OpenStreetMap
+Kirloskar Hospital,OpenStreetMap,17.403607,78.475363,OpenStreetMap
+ramesh eye care,OpenStreetMap,17.408909,78.489497,OpenStreetMap
+Tapadia Medical Centre's Eashwar Lakshmi Hospital,OpenStreetMap,17.411875,78.488857,OpenStreetMap
+K Prakash Rao (eye specialist),OpenStreetMap,17.407305,78.481642,OpenStreetMap
+Radha Rani Nursing Home,OpenStreetMap,17.40696,78.48211,OpenStreetMap
+Dental Care,OpenStreetMap,17.410385,78.485277,OpenStreetMap
+Sri Bhargavi Hospital,OpenStreetMap,17.451194,78.420872,OpenStreetMap
+Jaiswal Multi Speciality Hospitals,OpenStreetMap,17.451097,78.422493,OpenStreetMap
+Government Ayurvedic Hospital,OpenStreetMap,17.448067,78.433732,OpenStreetMap
+Raghava Multi Speciality Hospital,OpenStreetMap,17.438824,78.442095,OpenStreetMap
+VCARE Hospitals,OpenStreetMap,17.438512,78.442565,OpenStreetMap
+Deepthi Diagnostics,OpenStreetMap,17.439007,78.440638,OpenStreetMap
+,OpenStreetMap,17.394046,78.510425,OpenStreetMap
+ayurvedic clinic,OpenStreetMap,17.398766,78.448595,OpenStreetMap
+The crescent hospital,OpenStreetMap,17.398519,78.445814,OpenStreetMap
+Jagadamba Hospitals,OpenStreetMap,17.411539,78.490461,OpenStreetMap
+med plus,OpenStreetMap,17.404583,78.48934,OpenStreetMap
+Century hospital,OpenStreetMap,17.407267,78.444257,OpenStreetMap
+CENTURY SUPER SPECIALITY HOSPITAL,OpenStreetMap,17.407249,78.444734,OpenStreetMap
+"Vasan Healthcare Private Limited, Himayath Nagar",OpenStreetMap,17.400904,78.487571,OpenStreetMap
+Asian Institute of Nephrology and Urology,OpenStreetMap,17.416654,78.453476,OpenStreetMap
+Challa Hospital,OpenStreetMap,17.439619,78.450794,OpenStreetMap
+Pace Hospital,OpenStreetMap,17.444478,78.469498,OpenStreetMap
+Tanvir Hospital,OpenStreetMap,17.429776,78.434016,OpenStreetMap
+Sri Srinivasa Hospital,OpenStreetMap,17.350673,78.507861,OpenStreetMap
+Sitara medical center,OpenStreetMap,17.349712,78.470712,OpenStreetMap
+VINN Hospital,OpenStreetMap,17.437974,78.456376,OpenStreetMap
+Mahatma Sriramachandra Centenary Memorial Hospital,OpenStreetMap,17.394813,78.452506,OpenStreetMap
+Nice Hospital,OpenStreetMap,17.397239,78.456213,OpenStreetMap
+Red Cross Nature Cure Centre,OpenStreetMap,17.425798,78.420762,OpenStreetMap
+Goodwill Kidney and Surgical Centre,OpenStreetMap,17.405702,78.450887,OpenStreetMap
+Rohan Hospital,OpenStreetMap,17.394634,78.451908,OpenStreetMap
+Primary Veternary Hospital,OpenStreetMap,17.397962,78.454341,OpenStreetMap
+Sri Krishna,OpenStreetMap,17.410387,78.484465,OpenStreetMap
+Centre For Sight Superspecialty Eye Hospital,OpenStreetMap,17.424808,78.422562,OpenStreetMap
+Pragna Hospital,OpenStreetMap,17.42381,78.449832,OpenStreetMap
+Swarup Eye Centre,OpenStreetMap,17.423284,78.450549,OpenStreetMap
+Udai Omni Hospital,OpenStreetMap,17.396913,78.472261,OpenStreetMap
+Apoorva Hospital,OpenStreetMap,17.391388,78.436988,OpenStreetMap
+Ankith Multi Speciality Hospital,OpenStreetMap,17.350395,78.510534,OpenStreetMap
+Lions Club of Hyderabad Sadhuram Eye Hospital,OpenStreetMap,17.407714,78.478163,OpenStreetMap
+Al-Noor Hospital,OpenStreetMap,17.403364,78.417285,OpenStreetMap
+"Lotus Children's Hospital, Lakdikapul",OpenStreetMap,17.404114,78.461165,OpenStreetMap
+Vasan Healthcare Private Limited,OpenStreetMap,17.444493,78.46622,OpenStreetMap
+"Care Hospital, Nampally",OpenStreetMap,17.385431,78.474711,OpenStreetMap
+Aarogya Hospital,OpenStreetMap,17.385114,78.47541,OpenStreetMap
+Arvind Eye Hospital,OpenStreetMap,17.391894,78.437804,OpenStreetMap
+Anvitha Hospital,OpenStreetMap,17.431126,78.426611,OpenStreetMap
+Homeocare International,OpenStreetMap,17.443201,78.479696,OpenStreetMap
+Leads Medical Centre,OpenStreetMap,17.425248,78.453724,OpenStreetMap
+Sai Preethi Life Line Hospital,OpenStreetMap,17.394293,78.441923,OpenStreetMap
+Smt. Bhagwan Devi Hospital,OpenStreetMap,17.364441,78.473199,OpenStreetMap
+Kishorechand Chordia Eye Centre,OpenStreetMap,17.372944,78.467302,OpenStreetMap
+Praja Sai Hospital,OpenStreetMap,17.407326,78.492862,OpenStreetMap
+Smiline Dental Hospital,OpenStreetMap,17.429802,78.448707,OpenStreetMap
+Sainath Hospital,OpenStreetMap,17.439095,78.440666,OpenStreetMap
+Sadanand Nursing Home,OpenStreetMap,17.440625,78.42424,OpenStreetMap
+Kosaraju Hospitals Private Ltd.,OpenStreetMap,17.375538,78.419026,OpenStreetMap
+Maternal Health and Research Trust,OpenStreetMap,17.424088,78.431708,OpenStreetMap
+Nisha Hospital,OpenStreetMap,17.39442,78.462682,OpenStreetMap
+Dr.Agarwal's Eye Hospital,OpenStreetMap,17.429817,78.450649,OpenStreetMap
+Goshamahal Hospital,OpenStreetMap,17.381852,78.472729,OpenStreetMap
+Vijay Marie Hospital,OpenStreetMap,17.407391,78.455966,OpenStreetMap
+Deepa Hospital,OpenStreetMap,17.376392,78.467645,OpenStreetMap
+Premier Hospital,OpenStreetMap,17.391577,78.426872,OpenStreetMap
+Shamshad Children's Hospital,OpenStreetMap,17.397924,78.417534,OpenStreetMap
+Curewell Hospital,OpenStreetMap,17.405921,78.460653,OpenStreetMap
+Vijaya Krishna Nursing Home,OpenStreetMap,17.45257,78.444467,OpenStreetMap
+Vasu Hospital,OpenStreetMap,17.376004,78.419001,OpenStreetMap
+Jaferia Hospital,OpenStreetMap,17.370373,78.487161,OpenStreetMap
+Sravani Hospital,OpenStreetMap,17.350339,78.49169,OpenStreetMap
+Princess Durru Shehvar Children's And General Hospital,OpenStreetMap,17.367312,78.482658,OpenStreetMap
+Thumbay Hospital New Life,OpenStreetMap,17.376873,78.490338,OpenStreetMap
+Srivision Super Speciality Eye Hospital,OpenStreetMap,17.434397,78.417323,OpenStreetMap
+Jaya Bhushan Hospitals Pvt. Ltd,OpenStreetMap,17.394618,78.438652,OpenStreetMap
+Asian E.N.T. Care Centre,OpenStreetMap,17.421615,78.455677,OpenStreetMap
+Ayodhya Nursing Home,OpenStreetMap,17.391338,78.434803,OpenStreetMap
+Akira Eye Surgical Annexe,OpenStreetMap,17.403485,78.492435,OpenStreetMap
+Sulochana Eye Centre,OpenStreetMap,17.401944,78.477631,OpenStreetMap
+Muslim Maternity and Children's Hospital,OpenStreetMap,17.375164,78.489881,OpenStreetMap
+Fehmi Care Hospital,OpenStreetMap,17.437122,78.427295,OpenStreetMap
+S.V. Hospital,OpenStreetMap,17.44677,78.450482,OpenStreetMap
+Sri Sai Kidney Centre,OpenStreetMap,17.435468,78.451466,OpenStreetMap
+Sunrise Superspeciality Children's Hospital,OpenStreetMap,17.393046,78.489095,OpenStreetMap
+GSN Hospital,OpenStreetMap,17.441842,78.445246,OpenStreetMap
+Challa Eye Care Centre,OpenStreetMap,17.428187,78.432519,OpenStreetMap
+Royal Hospital For Dentistry and Facial Surgery,OpenStreetMap,17.412147,78.456985,OpenStreetMap
+Santhigiri Auyrveda and Siddha Hospital,OpenStreetMap,17.422912,78.452197,OpenStreetMap
+Allwin Hospital,OpenStreetMap,17.409126,78.459209,OpenStreetMap
+Sai Institute Of Arthroscopy And Sports Injury,OpenStreetMap,17.41862,78.452422,OpenStreetMap
+Anusha Hospital,OpenStreetMap,17.387966,78.439723,OpenStreetMap
+Partha Dental Clinic,OpenStreetMap,17.40592,78.479339,OpenStreetMap
+Venkatesh Borgaonker Nursing Home,OpenStreetMap,17.390579,78.491159,OpenStreetMap
+Sri Sai Srinivasa Speciality Hospitals Pvt. Ltd,OpenStreetMap,17.397934,78.492064,OpenStreetMap
+Matrika Hospital,OpenStreetMap,17.427416,78.460706,OpenStreetMap
+Dr. Mohan's Diabetes Specialities Centre,OpenStreetMap,17.411108,78.482968,OpenStreetMap
+Seha Hospital,OpenStreetMap,17.404143,78.462293,OpenStreetMap
+Kerala Sanjeevani Ayurvedic Centre,OpenStreetMap,17.417401,78.457772,OpenStreetMap
+Aries Maternity Hospital,OpenStreetMap,17.392684,78.445518,OpenStreetMap
+Sathya Kidney Centre and Super Speciality Hospital,OpenStreetMap,17.40478,78.482119,OpenStreetMap
+Vivekananda Hospital,OpenStreetMap,17.431204,78.455349,OpenStreetMap
+Nightingale Hospital,OpenStreetMap,17.3512,78.509449,OpenStreetMap
+Eva Care The Every Woman's Clinic,OpenStreetMap,17.407891,78.442658,OpenStreetMap
+Unity Centre For Orthopaedics And Trauma,OpenStreetMap,17.396224,78.488992,OpenStreetMap
+Meds Hospital,OpenStreetMap,17.365505,78.462008,OpenStreetMap
+Vatsalya Institute Of Pediatrics Hospital,OpenStreetMap,17.440586,78.45032,OpenStreetMap
+Maa Ent Institute,OpenStreetMap,17.426077,78.457375,OpenStreetMap
+Hyderabad Eye Centre,OpenStreetMap,17.399564,78.484392,OpenStreetMap
+Clear Vision Eye Hospital,OpenStreetMap,17.39863,78.484916,OpenStreetMap
+Centre For Sight - New Vision Laser Centers,OpenStreetMap,17.40665,78.475913,OpenStreetMap
+Majestic Hospital,OpenStreetMap,17.379978,78.421019,OpenStreetMap
+Dr.Shantabai Nursing Home,OpenStreetMap,17.391374,78.475713,OpenStreetMap
+Apollo Spectra Hospitals,OpenStreetMap,17.437643,78.452471,OpenStreetMap
+Alpha Super Speciality Hospital,OpenStreetMap,17.358662,78.478082,OpenStreetMap
+BSR ENT & Eye Nursing Home,OpenStreetMap,17.441658,78.490875,OpenStreetMap
+ASTER PRIME HOSPITALS (SRI SAINATHA MULTISPECIALITY HOSPITAL PVT.LTD.),OpenStreetMap,17.437348,78.446257,OpenStreetMap
+Amrutha Diabetic Centre,OpenStreetMap,17.429245,78.453126,OpenStreetMap
+Azam Hospital,OpenStreetMap,17.364869,78.46264,OpenStreetMap
+Dr. Sreedhar's Kidney & Infertility Hospital,OpenStreetMap,17.391072,78.426785,OpenStreetMap
+G.M.C. Multi Speciality Dental Hospital,OpenStreetMap,17.362184,78.482633,OpenStreetMap
+Dr. Saxena Integrative Medicine Private Ltd.,OpenStreetMap,17.405278,78.476577,OpenStreetMap
+Mythri Hospital,OpenStreetMap,17.383663,78.429241,OpenStreetMap
+St.Theresa's Hospitals,OpenStreetMap,17.451796,78.437772,OpenStreetMap
+Sunita Children's Hospital,OpenStreetMap,17.350242,78.51213,OpenStreetMap
+Dr. Akbar Eye Hospital,OpenStreetMap,17.393555,78.443528,OpenStreetMap
+Medi Vision Eye Care Centre,OpenStreetMap,17.398849,78.44795,OpenStreetMap
+Sunrich Hospital,OpenStreetMap,17.449063,78.431724,OpenStreetMap
+J.J. Hospital,OpenStreetMap,17.444806,78.432429,OpenStreetMap
+Ambaa Hospitals,OpenStreetMap,17.376355,78.42031,OpenStreetMap
+Mansoor Maternity And Childrens Hospital,OpenStreetMap,17.393511,78.456818,OpenStreetMap
+Avis Ankura Hospital for Women & Children,OpenStreetMap,17.411683,78.432401,OpenStreetMap
+Banjara 12 Hospital,OpenStreetMap,17.407546,78.449616,OpenStreetMap
+Manas Eye Hospital,OpenStreetMap,17.451483,78.424402,OpenStreetMap
+Bhavika Nursing Home,OpenStreetMap,17.440773,78.449212,OpenStreetMap
+Sree Srinivasa ENT Care and Research Institute,OpenStreetMap,17.425145,78.451046,OpenStreetMap
+Dr. P. Siva Reddy Eye Hospital,OpenStreetMap,17.39783,78.484294,OpenStreetMap
+Dr.Rao's ENT Super Speciality Hospital,OpenStreetMap,17.430567,78.450333,OpenStreetMap
+Neo Retina Eye Care,OpenStreetMap,17.396787,78.472845,OpenStreetMap
+Seethal Nursing Home,OpenStreetMap,17.429934,78.427112,OpenStreetMap
+Dharani Hospital,OpenStreetMap,17.383787,78.436729,OpenStreetMap
+Desai Nursing Home,OpenStreetMap,17.398215,78.484366,OpenStreetMap
+FMS Dental Hospital,OpenStreetMap,17.38553,78.480188,OpenStreetMap
+J S Mahaveer Hospital,OpenStreetMap,17.448647,78.484905,OpenStreetMap
+Mahesh Hospital And Research Foundation,OpenStreetMap,17.400473,78.491496,OpenStreetMap
+CDR Hospitals,OpenStreetMap,17.399138,78.483151,OpenStreetMap
+Shree Hospital,OpenStreetMap,17.4306,78.438897,OpenStreetMap
+Little Star Children's Hospital (A Unit Of Thirumala Child Health Services Pvt. Ltd),OpenStreetMap,17.427043,78.450353,OpenStreetMap
+Lazarus Hospitals,OpenStreetMap,17.399535,78.463035,OpenStreetMap
+Gupta Hospital,OpenStreetMap,17.366264,78.473135,OpenStreetMap
+Maruthi Hospital,OpenStreetMap,17.349732,78.515181,OpenStreetMap
+Himabindu Multi Speciality Hospital,OpenStreetMap,17.351268,78.509287,OpenStreetMap
+Kailash Diagnostic and Rehabilitation Center,OpenStreetMap,17.38548,78.475217,OpenStreetMap
+Image Hospital,OpenStreetMap,17.431465,78.44668,OpenStreetMap
+Lakshmi Maternity and Nursing Home,OpenStreetMap,17.400218,78.484001,OpenStreetMap
+Disneys Medi-Kid Hospitals Pvt. Ltd,OpenStreetMap,17.432212,78.449068,OpenStreetMap
+Focus Hospital,OpenStreetMap,17.347322,78.519589,OpenStreetMap
+Ganga Nursing Home,OpenStreetMap,17.362328,78.468563,OpenStreetMap
+SVS Hospitals,OpenStreetMap,17.389121,78.492808,OpenStreetMap
+Vishwa Medi Care and Diagnostic Centre,OpenStreetMap,17.38369,78.489747,OpenStreetMap
+Maxivision Eye Hospital,OpenStreetMap,17.445853,78.466364,OpenStreetMap
+Avis Hospitals,OpenStreetMap,17.429389,78.417826,OpenStreetMap
+Sri Rohini Hospital,OpenStreetMap,17.349509,78.512897,OpenStreetMap
+Usha Mohan Hospital,OpenStreetMap,17.36424,78.427566,OpenStreetMap
+"Area Hospital, Nampally",OpenStreetMap,17.392256,78.463167,OpenStreetMap
+NETHRA EYE INSTITUE,OpenStreetMap,17.439183,78.442569,OpenStreetMap
+RISE CHILDRENS HOSPITAL (A UNIT OF RISE HOSPITALS PVT. LTD.),OpenStreetMap,17.380234,78.429708,OpenStreetMap
+SRISHTI EYE CENTRE,OpenStreetMap,17.394949,78.457392,OpenStreetMap
+SAI SURYA HOSPITAL,OpenStreetMap,17.361259,78.428074,OpenStreetMap
+"District Hospital, King Koti",OpenStreetMap,17.393224,78.481999,OpenStreetMap
+Wellness Hospital,OpenStreetMap,17.435904,78.449979,OpenStreetMap
+Times Hospital,OpenStreetMap,17.420571,78.441686,OpenStreetMap
+ZOI HOSPITALS,OpenStreetMap,17.363293,78.428498,OpenStreetMap
+THE BIRTHPLACE,OpenStreetMap,17.424675,78.433091,OpenStreetMap
+MANKINDD HOSPITAL,OpenStreetMap,17.405516,78.480162,OpenStreetMap
+IRIS EYE HOSPITAL,OpenStreetMap,17.369622,78.427342,OpenStreetMap
+RAMA EYE HOSPITAL,OpenStreetMap,17.391043,78.471264,OpenStreetMap
+Human Touch Hospital,OpenStreetMap,17.352918,78.418073,OpenStreetMap
+GERMANTEN HOSPITALS,OpenStreetMap,17.361957,78.428178,OpenStreetMap
+HIGH SIGHT SUPER SPECILAITY EYE HOSPITAL,OpenStreetMap,17.416033,78.447354,OpenStreetMap
+SMART VISION EYE SPECIALITIES PRIVATE LIMITED,OpenStreetMap,17.428899,78.439882,OpenStreetMap
+RAMESH LASIK & LASER CENTRE,OpenStreetMap,17.398558,78.484727,OpenStreetMap
+ORIENT EYE HOSPITAL,OpenStreetMap,17.394264,78.430725,OpenStreetMap
+SAFE KIDS HOSPITALS PRIVATE LIMITED,OpenStreetMap,17.375307,78.429538,OpenStreetMap
+SOUTHERN GEM HOSPITAL,OpenStreetMap,17.405834,78.475422,OpenStreetMap
+SRI SIDDESHWARA HOSPITAL,OpenStreetMap,17.346624,78.521122,OpenStreetMap
+NEPHROPLUS KIDNEY CARE HOSPITALS,OpenStreetMap,17.41615,78.433864,OpenStreetMap
+Vascular Care Center,OpenStreetMap,17.418301,78.458244,OpenStreetMap
+SECUNDERABAD WOMENS HOSPITAL,OpenStreetMap,17.4392,78.480377,OpenStreetMap
+CITI NEURO CENTER,OpenStreetMap,17.413727,78.424486,OpenStreetMap
+SREE SREYAS HOSPITAL,OpenStreetMap,17.34589,78.529242,OpenStreetMap
+STORK HOME FERNANDEZ HOSPITAL,OpenStreetMap,17.407051,78.441287,OpenStreetMap
+Amrutha Hospital For Health and Fitness,OpenStreetMap,17.391887,78.440622,OpenStreetMap
+Pavithra Nursing Home,OpenStreetMap,17.440119,78.423693,OpenStreetMap
+Osmania General Hospital's Blood Bank,OpenStreetMap,17.372843,78.474026,OpenStreetMap
+Sri Venkateshwara Nursing Home - Narayanguda,OpenStreetMap,17.39447,78.488923,OpenStreetMap
+Kamineni Fertility Centre,OpenStreetMap,17.39293,78.479755,OpenStreetMap
+Omni Hospital - Banjara Hills,OpenStreetMap,17.407408,78.442825,OpenStreetMap
+Jayanti Maternity and Nursing Home,OpenStreetMap,17.389349,78.47347,OpenStreetMap
+"Royal Ear, Nose and Throat (ENT) Hospital",OpenStreetMap,17.385132,78.482281,OpenStreetMap
+Shiva Homoeo Stores and clinic,OpenStreetMap,17.442029,78.440725,OpenStreetMap
+Gutta Eye Clinic,OpenStreetMap,17.432956,78.446139,OpenStreetMap
+ZOI Hospital,OpenStreetMap,17.427774,78.457335,OpenStreetMap
+Sri Sai Rama Clinic,OpenStreetMap,17.445234,78.461754,OpenStreetMap
+Medicare Hospital,OpenStreetMap,17.35547,78.463608,OpenStreetMap
+Salamah Hospital,OpenStreetMap,17.39218,78.426449,OpenStreetMap
+Skorts Multi Speciality Clinics,OpenStreetMap,17.443615,78.434617,OpenStreetMap
+IBM Hospital,OpenStreetMap,17.395735,78.417524,OpenStreetMap
+"Community Health Centre, Panipura",OpenStreetMap,17.373237,78.446451,OpenStreetMap
+SHREYA HOSPITAL,OpenStreetMap,17.450948,78.423556,OpenStreetMap
+Medicure Diagnostic and Research Center(Alekhya Scanning Center),OpenStreetMap,17.395367,78.454415,OpenStreetMap
+Shresta hospital,OpenStreetMap,17.436622,78.445743,OpenStreetMap
+Dr. Moinuddin clinic,OpenStreetMap,17.394532,78.435277,OpenStreetMap
+Raaj Hospital,OpenStreetMap,17.404416,78.483836,OpenStreetMap
+Bharati Nursing Home,OpenStreetMap,17.449262,78.447369,OpenStreetMap
+Uchvaas Hospital,OpenStreetMap,17.412113,78.422992,OpenStreetMap
+"Government ENT Hospital ,Koti",OpenStreetMap,17.384523,78.482015,OpenStreetMap
+Navodaya Hospital,OpenStreetMap,17.441665,78.48606,OpenStreetMap
+Brinnova rehabilation centre,OpenStreetMap,17.410916,78.432519,OpenStreetMap
+"Vijaya Diagnostic Centre, Himayatnagar",OpenStreetMap,17.404151,78.479872,OpenStreetMap
+Oasis Fertility Centre,OpenStreetMap,17.441949,78.48993,OpenStreetMap
+Partha Dental Skin Hair Clinic,OpenStreetMap,17.438752,78.450502,OpenStreetMap
+S L Diagnostic Center,OpenStreetMap,17.410217,78.461228,OpenStreetMap
+"Government Hospital, Suraj Bhan",OpenStreetMap,17.353561,78.474542,OpenStreetMap
+Mina multi speciality Hospital,OpenStreetMap,17.373049,78.483844,OpenStreetMap
+Pathcare Labs Pvt Ltd,OpenStreetMap,17.444713,78.469159,OpenStreetMap
+Ferticare IVF Asist,OpenStreetMap,17.427406,78.432167,OpenStreetMap
+DTC TB Unit Erragadda,OpenStreetMap,17.445215,78.43241,OpenStreetMap
+Dr.Vivek's Multispeciality Dental care,OpenStreetMap,17.447234,78.432645,OpenStreetMap
+PRAANAA PAIN CLINIC,OpenStreetMap,17.364641,78.428614,OpenStreetMap
+Vinayaka Nethralaya Eye Hospital,OpenStreetMap,17.393298,78.426116,OpenStreetMap
+Avinash child hospital,OpenStreetMap,17.414616,78.453925,OpenStreetMap
+Sarojini Devi EYE Hospital,OpenStreetMap,17.413723,78.491192,OpenStreetMap
+CHC KHAIRATABAD,OpenStreetMap,17.444813,78.421911,OpenStreetMap
+"Community Health Centre, AMEERPET",OpenStreetMap,17.448549,78.424885,OpenStreetMap
+Shishira hospitals,OpenStreetMap,17.431772,78.445573,OpenStreetMap
+Medkid children's hospital,OpenStreetMap,17.430249,78.448707,OpenStreetMap
+D.K.GOVT. HOMOEO HOSPITAL,OpenStreetMap,17.384167,78.456235,OpenStreetMap
+"Government Ayurvedic Hospital, Erragadda, Hyderabad",OpenStreetMap,17.448709,78.433843,OpenStreetMap
+Niloufer Hospital,OpenStreetMap,17.398681,78.461038,OpenStreetMap
+"Area Hospital, Golconda",OpenStreetMap,17.397502,78.429398,OpenStreetMap
+Government Chest Hospital,OpenStreetMap,17.445428,78.434959,OpenStreetMap
+"MG Govt Maternity Hospital, Petla Burz",OpenStreetMap,17.368461,78.467418,OpenStreetMap
+MNJ Institute of Oncology and Regional Cancer Center,OpenStreetMap,17.392244,78.460193,OpenStreetMap
+Institute of Mental Health,OpenStreetMap,17.450672,78.436112,OpenStreetMap
+MK Dentistry,OpenStreetMap,17.395148,78.455663,OpenStreetMap
+eyes specalist,OpenStreetMap,17.412607,78.490154,OpenStreetMap
+Eye Hospital centre,OpenStreetMap,17.37313,78.467254,OpenStreetMap
+Chanda Nursing homes,OpenStreetMap,17.374772,78.469125,OpenStreetMap
+Pilies Clinic,OpenStreetMap,17.375007,78.469022,OpenStreetMap
+Chetana Hospital,OpenStreetMap,17.436006,78.483215,OpenStreetMap
+"Office Of The Director Of Health, Telangana",OpenStreetMap,17.3881,78.488338,OpenStreetMap
+Nizams Institute of Medical Sciences Hospital (NIMS),OpenStreetMap,17.422621,78.453443,OpenStreetMap
+Axon Hospital,OpenStreetMap,17.439328,78.442376,OpenStreetMap
+Virinchi Hospitals,OpenStreetMap,17.40809,78.451486,OpenStreetMap
+Olive Hospital,OpenStreetMap,17.393625,78.427292,OpenStreetMap
+Nizam's Institute Of Medical Sciences,OpenStreetMap,17.421723,78.451529,OpenStreetMap
+Nizamia Government General Hospital,OpenStreetMap,17.360361,78.475052,OpenStreetMap
+Victoria Zenana Maternity Hospital,OpenStreetMap,17.369369,78.474082,OpenStreetMap
+"Modern Government Maternity Hospital, Petla Burz",OpenStreetMap,17.368447,78.467415,OpenStreetMap
+Sridevi Fertility Center,OpenStreetMap,17.410198,78.4894,OpenStreetMap
+Sri Narmada Hospital,OpenStreetMap,17.413544,78.490533,OpenStreetMap
+Care Hospital,OpenStreetMap,17.412481,78.450407,OpenStreetMap
+DR SHARATH CHANDRA,OpenStreetMap,17.430794,78.41721,OpenStreetMap
+Appolo Cradle Hospital,OpenStreetMap,17.416419,78.417557,OpenStreetMap
+Lakshmi Narayana Speciality Clinics,OpenStreetMap,17.430721,78.42428,OpenStreetMap
+ASVINS Specialty Cancer Hospital,OpenStreetMap,17.424961,78.45639,OpenStreetMap
+Omega Hospital,OpenStreetMap,17.41359,78.424019,OpenStreetMap
+Sowmya Children's Hospital,OpenStreetMap,17.443028,78.443824,OpenStreetMap
+SIDDHARTH EYE CENTRE,OpenStreetMap,17.394004,78.482386,OpenStreetMap
+WIN VISION EYE HOSPITAL,OpenStreetMap,17.434927,78.455085,OpenStreetMap
+Hyderabad Nursing Home,OpenStreetMap,17.406903,78.476115,OpenStreetMap
+"Nirmala Maternity, Orthopaedic & General Hospital",OpenStreetMap,17.394349,78.451799,OpenStreetMap
+Gleneagles Global Hospital,OpenStreetMap,17.405273,78.463144,OpenStreetMap
+Sunshine Heart Institute,OpenStreetMap,17.441564,78.486374,OpenStreetMap
+Sunshine Hospitals Out Patient Care,OpenStreetMap,17.440594,78.48606,OpenStreetMap
+Aditya Hospital,OpenStreetMap,17.390412,78.481182,OpenStreetMap
+ITMR Speciality Diagnostics,OpenStreetMap,17.421269,78.449115,OpenStreetMap
+Sunshine Hospital,OpenStreetMap,17.441225,78.486886,OpenStreetMap
+khuteja hospitals,OpenStreetMap,17.371493,78.443766,OpenStreetMap
+Maxcure Hospital,OpenStreetMap,17.406525,78.471645,OpenStreetMap
+Sai Vani Super Specialty Hospital,OpenStreetMap,17.410913,78.483465,OpenStreetMap
+Dr. Ramayya's Urology Nephrology Institute and Hospital Private Limited,OpenStreetMap,17.40475,78.475114,OpenStreetMap
+Government General and Chest Hospital,OpenStreetMap,17.44529,78.43484,OpenStreetMap
+Medwin Hospital,OpenStreetMap,17.393585,78.471944,OpenStreetMap
+Ravi Helios Hospital,OpenStreetMap,17.411009,78.483162,OpenStreetMap
+Basavatarakam Indo American Cancer Institute And Research Centre,OpenStreetMap,17.417247,78.430413,OpenStreetMap
+Yashoda Super Speciality Hospitals,OpenStreetMap,17.424544,78.456953,OpenStreetMap
+L V Prasad Eye Institute,OpenStreetMap,17.42472,78.427576,OpenStreetMap
+Asha Hospital,OpenStreetMap,17.421163,78.434525,OpenStreetMap
+ప్రకృతి చికిత్సాలయము,OpenStreetMap,17.444537,78.451754,OpenStreetMap
+Rainbow Children’s Hospital,OpenStreetMap,17.425454,78.431926,OpenStreetMap
+Yashoda Hospital,OpenStreetMap,17.424499,78.45696,OpenStreetMap
+Sitaphalmandi Flyover,OpenStreetMap,17.427337,78.519174,OpenStreetMap Nominatim
+Tilak Nagar Main Road,OpenStreetMap,17.394046,78.510425,OpenStreetMap Nominatim
+street number 3,OpenStreetMap,17.446794,78.379665,OpenStreetMap Nominatim
+Nizampet Road,OpenStreetMap,17.502983,78.38878,OpenStreetMap Nominatim
+KPHB Road No 1 Road,OpenStreetMap,17.487713,78.399689,OpenStreetMap Nominatim
+Kalyan Nagar Cross Road,OpenStreetMap,17.446159,78.435768,OpenStreetMap Nominatim
+Ramdev Rao Hospital,OpenStreetMap,17.490192,78.40691,OpenStreetMap Nominatim
+VITAL'S Hospital,OpenStreetMap,17.507006,78.395168,OpenStreetMap Nominatim
+DR NAVEEN REDDYS GENERAL HOSPITAL,OpenStreetMap,17.454615,78.42001,OpenStreetMap Nominatim
+childern hospital,OpenStreetMap,17.50307,78.426263,OpenStreetMap Nominatim
+Sumana Hospital,OpenStreetMap,17.492003,78.409337,OpenStreetMap Nominatim
+People's Hospital,OpenStreetMap,17.518463,78.396871,OpenStreetMap Nominatim
+Chaitanya Hospital,OpenStreetMap,17.469442,78.425677,OpenStreetMap Nominatim
+Apple Multi Speciality Hospital,OpenStreetMap,17.398556,78.414307,OpenStreetMap Nominatim
+Tadla Eye Hospital,OpenStreetMap,17.496182,78.405509,OpenStreetMap Nominatim
+Mumbai Highway,OpenStreetMap,17.446159,78.435768,OpenStreetMap Nominatim
+Sriya Hospital,OpenStreetMap,17.475126,78.539475,OpenStreetMap Nominatim
+Jayasai Hospital For Women,OpenStreetMap,17.485059,78.447117,OpenStreetMap Nominatim
+SREE ROYAL HOSPITAL,OpenStreetMap,17.463532,78.456212,OpenStreetMap Nominatim
+SUDHA HOSPITAL,OpenStreetMap,17.465781,78.538922,OpenStreetMap Nominatim
+SHEKAR HOSPITAL,OpenStreetMap,17.478755,78.481643,OpenStreetMap Nominatim
+Pavithra Hospital,OpenStreetMap,17.467585,78.48199,OpenStreetMap Nominatim
+SKS Hospital,OpenStreetMap,17.47531,78.485776,OpenStreetMap Nominatim
+Dristi Netralaya Hospital,OpenStreetMap,17.469166,78.477329,OpenStreetMap Nominatim
+Khairatabad Market Road,OpenStreetMap,17.410381,78.464096,OpenStreetMap Nominatim
+KS MULTISPECIALTY HOSPITAL,OpenStreetMap,17.469143,78.477752,OpenStreetMap Nominatim
+Lalaguda Bridge,OpenStreetMap,17.437678,78.5221,OpenStreetMap Nominatim
+Chilkalaguda Road,OpenStreetMap,17.428704,78.518234,OpenStreetMap Nominatim
+Krishna Sai Multispeciality Hospital,OpenStreetMap,17.345084,78.528888,OpenStreetMap Nominatim
+Princess Esra Hospital,OpenStreetMap,17.356842,78.473802,OpenStreetMap Nominatim
+Neelima Hospital,OpenStreetMap,17.456222,78.425652,OpenStreetMap Nominatim
+Hayatt Hospital,OpenStreetMap,17.401225,78.412409,OpenStreetMap Nominatim
+Kavya Nursing Home,OpenStreetMap,17.494147,78.405352,OpenStreetMap Nominatim
+Amar Hospitals,OpenStreetMap,17.477157,78.420403,OpenStreetMap Nominatim
+Swami Vivekanand Lane,OpenStreetMap,17.460548,78.354751,OpenStreetMap Nominatim
+Maholla Clinic,OpenStreetMap,17.456675,78.41155,OpenStreetMap Nominatim
+Begumpet Railway Flyover,OpenStreetMap,17.438001,78.456376,OpenStreetMap Nominatim
+Maxwell Hospital,OpenStreetMap,17.454461,78.422009,OpenStreetMap Nominatim
+RELIEF HOSPITAL,OpenStreetMap,17.398382,78.416165,OpenStreetMap Nominatim
+MAA E.N.T. Hospitals,OpenStreetMap,17.427266,78.414327,OpenStreetMap Nominatim
+Nallagandla Road,OpenStreetMap,17.470728,78.310753,OpenStreetMap Nominatim
+Vijaylaxmi Maternity Hospital,OpenStreetMap,17.468492,78.457666,OpenStreetMap Nominatim
+Pratibha Maternity Home,OpenStreetMap,17.471166,78.505088,OpenStreetMap Nominatim
+Peoples Health Centre,OpenStreetMap,17.457585,78.452302,OpenStreetMap Nominatim
+RNC Hospitals,OpenStreetMap,17.46483,78.44962,OpenStreetMap Nominatim
+Cocoon Hospital,OpenStreetMap,17.360911,78.389319,OpenStreetMap Nominatim
+Blood Bank,OpenStreetMap,17.42492,78.413994,OpenStreetMap Nominatim
+Alavi Hospital,OpenStreetMap,17.492517,78.451227,OpenStreetMap Nominatim
+Malla Reddy Health City (MRHC),OpenStreetMap,17.545473,78.432605,OpenStreetMap Nominatim
+S.V.K. Hospital Private Ltd.,OpenStreetMap,17.511919,78.44658,OpenStreetMap Nominatim
+Ragani Children's Hospital,OpenStreetMap,17.514184,78.447014,OpenStreetMap Nominatim
+Ankura Kodali Hospital,OpenStreetMap,17.484064,78.448726,OpenStreetMap Nominatim
+Raman Hospital,OpenStreetMap,17.495658,78.453247,OpenStreetMap Nominatim
+Sunridge Multi-Speciality Hospital,OpenStreetMap,17.453862,78.421752,OpenStreetMap Nominatim
+Childrens Hospital,OpenStreetMap,17.516119,78.438899,OpenStreetMap Nominatim
+Health Care General Hospital,OpenStreetMap,17.539151,78.433749,OpenStreetMap Nominatim
+SAI SIDDHARTHA HOSPITAL,OpenStreetMap,17.517141,78.444989,OpenStreetMap Nominatim
+Sunray Hospital,OpenStreetMap,17.51603,78.381932,OpenStreetMap Nominatim
+Usha Mullapudi Cardiac Centre,OpenStreetMap,17.520189,78.429149,OpenStreetMap Nominatim
+Neelima - Sanath Nagar,OpenStreetMap,17.456434,78.438865,OpenStreetMap Nominatim
+Owaisi Hospital and Research Centre,OpenStreetMap,17.340848,78.506744,OpenStreetMap Nominatim
+Area Hospital,OpenStreetMap,17.331469,78.565205,OpenStreetMap Nominatim
+LEGEND HOSPITAL,OpenStreetMap,17.336046,78.576292,OpenStreetMap Nominatim
+Sai Venkateshwara Hospital,OpenStreetMap,17.34444,78.529845,OpenStreetMap Nominatim
+Dr.Agarwal's Eye Hospital - Santhosh Nagar,OpenStreetMap,17.345513,78.508181,OpenStreetMap Nominatim
+Vijaya Hospital - Ranga Reddy,OpenStreetMap,17.331672,78.533666,OpenStreetMap Nominatim
+SRI KARA HOSPITAL,OpenStreetMap,17.344508,78.548463,OpenStreetMap Nominatim
+HIRANYAA MULTI SPECIALITY & CHILDREN'S HOSPITAL,OpenStreetMap,17.319822,78.519841,OpenStreetMap Nominatim
+Gemini Health Care,OpenStreetMap,17.337676,78.473338,OpenStreetMap Nominatim
+EVYA HOSPITALS AND DIABETIC RESERACH CENTER,OpenStreetMap,17.33922,78.570819,OpenStreetMap Nominatim
+"Area Hospital, Vanasthalipuram",OpenStreetMap,17.32891,78.563899,OpenStreetMap Nominatim
+Bhagyalatha Hospital,OpenStreetMap,17.331248,78.588256,OpenStreetMap Nominatim
+Krishna Hospital,OpenStreetMap,17.333476,78.531298,OpenStreetMap Nominatim
+Sridhar Multi Speciality Hospital,OpenStreetMap,17.344919,78.508756,OpenStreetMap Nominatim
+Sri Sai Orthopaedic and Multi Speciality Hospital,OpenStreetMap,17.33896,78.522628,OpenStreetMap Nominatim
+Viswas Hospital,OpenStreetMap,17.340116,78.52185,OpenStreetMap Nominatim
+OXYGEN AND Medicity Hospital,OpenStreetMap,17.341672,78.557641,OpenStreetMap Nominatim
+Sri Mahalaxmi Eye Hospital,OpenStreetMap,17.336906,78.569949,OpenStreetMap Nominatim
+Sri Ramadevi Orthopaedic Hospital,OpenStreetMap,17.328613,78.568523,OpenStreetMap Nominatim
+Krishnaveni Hospitals,OpenStreetMap,17.328667,78.599351,OpenStreetMap Nominatim
+appolo medical shop1,OpenStreetMap,17.314745,78.600716,OpenStreetMap Nominatim
+Sri Vyshnava Nagar Road,OpenStreetMap,17.374545,78.545597,OpenStreetMap Nominatim
+Sunrise Hospitals,OpenStreetMap,17.327921,78.601719,OpenStreetMap Nominatim
+Leela Hospital,OpenStreetMap,17.455416,78.42381,OpenStreetMap Nominatim
+Kid Care Children's Hospital,OpenStreetMap,17.484116,78.448892,OpenStreetMap Nominatim
+South Central Railway Central Hospital Lallaguda,OpenStreetMap,17.437722,78.521976,OpenStreetMap Nominatim
+Amberpet Main Road,OpenStreetMap,17.400154,78.540526,OpenStreetMap Nominatim
+Nacharam Road,OpenStreetMap,17.427422,78.551765,OpenStreetMap Nominatim
