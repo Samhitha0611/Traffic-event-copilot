@@ -1,0 +1,62 @@
+[
+  {
+    "tag": "[SIGNAL-1]",
+    "name": "3rd Street Junction",
+    "lat": null,
+    "lon": null,
+    "vc": 1.54,
+    "source": "Hotspot junction (ASSUMED signal)",
+    "action_en": "EXTEND GREEN to 120s on main event approach; SHORTEN cross-road to 45s",
+    "action_te": "ప్రధాన మార్గంలో గ్రీన్ సిగ్నల్ 120 సెకన్లకు పెంచండి; క్రాస్-రోడ్డును 45 సెకన్లకు తగ్గించండి",
+    "cycle_s": "120s / 45s (ASSUMED)",
+    "activate": "T-60 min"
+  },
+  {
+    "tag": "[SIGNAL-2]",
+    "name": "Unnamed residential road near 17.458N 78.350E Junction",
+    "lat": null,
+    "lon": null,
+    "vc": 1.54,
+    "source": "Hotspot junction (ASSUMED signal)",
+    "action_en": "EXTEND GREEN to 120s on main event approach; SHORTEN cross-road to 45s",
+    "action_te": "ప్రధాన మార్గంలో గ్రీన్ సిగ్నల్ 120 సెకన్లకు పెంచండి; క్రాస్-రోడ్డును 45 సెకన్లకు తగ్గించండి",
+    "cycle_s": "120s / 45s (ASSUMED)",
+    "activate": "T-60 min"
+  },
+  {
+    "tag": "[SIGNAL-3]",
+    "name": "dlf gachibowli Junction",
+    "lat": null,
+    "lon": null,
+    "vc": 0.99,
+    "source": "Hotspot junction (ASSUMED signal)",
+    "action_en": "EXTEND GREEN to 110s along diversion corridor to pull alternate flow",
+    "action_te": "మళ్లింపు మార్గంలో గ్రీన్ సిగ్నల్ 110 సెకన్లకు పెంచండి",
+    "cycle_s": "110s (ASSUMED)",
+    "activate": "T-60 min"
+  },
+  {
+    "tag": "[SIGNAL-4]",
+    "name": "Unnamed residential road near 17.449N 78.357E Junction",
+    "lat": null,
+    "lon": null,
+    "vc": 0.97,
+    "source": "Hotspot junction (ASSUMED signal)",
+    "action_en": "EXTEND GREEN to 110s along diversion corridor to pull alternate flow",
+    "action_te": "మళ్లింపు మార్గంలో గ్రీన్ సిగ్నల్ 110 సెకన్లకు పెంచండి",
+    "cycle_s": "110s (ASSUMED)",
+    "activate": "T-60 min"
+  },
+  {
+    "tag": "[SIGNAL-5]",
+    "name": "Unnamed residential road near 17.449N 78.358E Junction",
+    "lat": null,
+    "lon": null,
+    "vc": 0.97,
+    "source": "Hotspot junction (ASSUMED signal)",
+    "action_en": "EXTEND GREEN to 110s along diversion corridor to pull alternate flow",
+    "action_te": "మళ్లింపు మార్గంలో గ్రీన్ సిగ్నల్ 110 సెకన్లకు పెంచండి",
+    "cycle_s": "110s (ASSUMED)",
+    "activate": "T-60 min"
+  }
+]

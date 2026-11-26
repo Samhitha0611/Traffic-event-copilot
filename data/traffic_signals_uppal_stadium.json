@@ -1,0 +1,38 @@
+[
+  {
+    "tag": "[SIGNAL-1]",
+    "name": "Street 8 Junction",
+    "lat": null,
+    "lon": null,
+    "vc": 1.6,
+    "source": "Hotspot junction (ASSUMED signal)",
+    "action_en": "EXTEND GREEN to 120s on main event approach; SHORTEN cross-road to 45s",
+    "action_te": "ప్రధాన మార్గంలో గ్రీన్ సిగ్నల్ 120 సెకన్లకు పెంచండి; క్రాస్-రోడ్డును 45 సెకన్లకు తగ్గించండి",
+    "cycle_s": "120s / 45s (ASSUMED)",
+    "activate": "T-60 min"
+  },
+  {
+    "tag": "[SIGNAL-2]",
+    "name": "Habsiguda Rd Junction",
+    "lat": null,
+    "lon": null,
+    "vc": 1.2,
+    "source": "Hotspot junction (ASSUMED signal)",
+    "action_en": "EXTEND GREEN to 120s on main event approach; SHORTEN cross-road to 45s",
+    "action_te": "ప్రధాన మార్గంలో గ్రీన్ సిగ్నల్ 120 సెకన్లకు పెంచండి; క్రాస్-రోడ్డును 45 సెకన్లకు తగ్గించండి",
+    "cycle_s": "120s / 45s (ASSUMED)",
+    "activate": "T-60 min"
+  },
+  {
+    "tag": "[SIGNAL-3]",
+    "name": "Uppal X Rd Junction",
+    "lat": null,
+    "lon": null,
+    "vc": 0.9,
+    "source": "Hotspot junction (ASSUMED signal)",
+    "action_en": "MONITOR — Keep standard 90s cycle with manual officer standby",
+    "action_te": "పర్యవేక్షించండి — సాధారణ 90 సెకన్ల సైకిల్ కొనసాగించండి",
+    "cycle_s": "90s (ASSUMED)",
+    "activate": "T-30 min"
+  }
+]

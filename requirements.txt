@@ -10,3 +10,5 @@ folium>=0.16
 streamlit>=1.35
 streamlit-folium>=0.20
 requests>=2.31
+groq>=0.11
+python-dotenv>=1.0

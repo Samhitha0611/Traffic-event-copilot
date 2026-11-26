@@ -18,7 +18,7 @@ def _colour(vc):
     return "#d62728" if vc > 1.0 else "#ffbf00" if vc >= 0.8 else "#2ca02c"
 
 
-def make_map(D, res, use_naive=False, show_zones=True):
+def make_map(D, res, use_naive=False, show_zones=True, signals=None):
     venue_center = res.get("params", {}).get("venue_latlon") or STADIUM
     m = folium.Map(location=venue_center, zoom_start=14, tiles="OpenStreetMap", control_scale=True)
     base = folium.FeatureGroup("Main roads (grey)")
@@ -166,6 +166,25 @@ def make_map(D, res, use_naive=False, show_zones=True):
                       icon=folium.Icon(color="green", icon="train", prefix="fa")).add_to(pts)
 
     pts.add_to(m)
+
+    if signals:
+        sig_group = folium.FeatureGroup("Traffic signals [SIGNAL]")
+        for sg in signals:
+            lat, lon = sg.get("lat"), sg.get("lon")
+            if lat is not None and lon is not None:
+                s_tip = (
+                    f"<b>{sg.get('tag', '[SIGNAL]')} {sg.get('name', 'Signal')}</b><br>"
+                    f"V/C: {sg.get('vc', 0):.2f} | Cycle: {sg.get('cycle_s', '90s')}<br>"
+                    f"Action: {sg.get('action_en', '')}<br>"
+                    f"Activate: {sg.get('activate', 'T-60 min')}"
+                )
+                folium.Marker(
+                    (float(lat), float(lon)),
+                    tooltip=folium.Tooltip(s_tip),
+                    icon=folium.Icon(color="cadetblue", icon="traffic-light", prefix="fa"),
+                ).add_to(sig_group)
+        sig_group.add_to(m)
+
     folium.LayerControl(collapsed=True).add_to(m)
 
     legend = """<div style="position:fixed;bottom:25px;left:25px;z-index:9999;background:white;padding:8px 12px;

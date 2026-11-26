@@ -180,6 +180,10 @@ STRINGS: dict[str, dict[str, str]] = {
         "English": "6 · 💬 Police Copilot Chatbot",
         "తెలుగు": "6 · 💬 పోలీసు కో-పైలట్ చాట్‌బాట్ (Police Chatbot)",
     },
+    "tab7_title": {
+        "English": "7 · 📝 Post-Event Review",
+        "తెలుగు": "7 · 📝 ఈవెంట్ అనంతర సమీక్ష (Post-Event Review)",
+    },
 
     # Tab 1 Guidance
     "tab1_demo": {
